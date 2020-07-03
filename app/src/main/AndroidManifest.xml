@@ -56,11 +56,6 @@
             android:theme="@style/Theme.TrebleShot.NoActionBar.StaticStatusBar" />
 
         <activity
-            android:name=".activity.TextStreamActivity"
-            android:label="@string/text_textStream"
-            android:theme="@style/Theme.TrebleShot.NoActionBar.StaticStatusBar" />
-
-        <activity
             android:name=".activity.ConnectionManagerActivity"
             android:label="@string/text_connectDevices"
             android:theme="@style/Theme.TrebleShot.NoActionBar.StaticStatusBar" />

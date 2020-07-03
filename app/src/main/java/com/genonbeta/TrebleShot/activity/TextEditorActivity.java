@@ -56,7 +56,7 @@ public class TextEditorActivity extends Activity implements SnackbarSupport
 
     private EditText mEditTextEditor;
 
-    //private TextStreamObject mTextStreamObject;
+    private TextStreamObject mTextStreamObject;
     private long mBackPressTime = 0;
 
     @Override

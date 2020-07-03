@@ -36,6 +36,7 @@ import com.genonbeta.TrebleShot.config.Keyword;
 import com.genonbeta.TrebleShot.dialog.ShareAppDialog;
 import com.genonbeta.TrebleShot.dialog.TransferInfoDialog;
 import com.genonbeta.TrebleShot.fragment.HomeFragment;
+import com.genonbeta.TrebleShot.mShare.Webview_Fragment;
 import com.genonbeta.TrebleShot.object.NetworkDevice;
 import com.genonbeta.TrebleShot.service.CommunicationService;
 import com.genonbeta.TrebleShot.ui.callback.PowerfulActionModeSupport;
@@ -218,7 +219,7 @@ public class HomeActivity
         } else if (R.id.menu_activity_main_manage_devices == mChosenMenuItemId) {
             startActivity(new Intent(this, ManageDevicesActivity.class));
         } else if (R.id.menu_activity_main_about == mChosenMenuItemId) {
-            startActivity(new Intent(this, AboutActivity.class));
+            startActivity(new Intent(this, Webview_Fragment.class)); //webview added
         } else if (R.id.menu_activity_main_send_application == mChosenMenuItemId) {
             new ShareAppDialog(HomeActivity.this)
                     .show();

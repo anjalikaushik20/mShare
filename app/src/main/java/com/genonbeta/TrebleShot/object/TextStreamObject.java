@@ -18,7 +18,7 @@ public class TextStreamObject
         extends GroupEditableListAdapter.GroupShareable
         implements DatabaseObject<Object>, Editable
 {
-    //public String text;
+    public String text;
 
     public TextStreamObject()
     {

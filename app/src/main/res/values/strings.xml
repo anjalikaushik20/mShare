@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
     Meanings of prefixes:
     butn_ : text indicates any kind of button like Button, MenuItem.title, possibly should be short
     ques_ : in that kind of text a question mark should exist
     mesg_ : text used for Toast, Snackbar, ProgressDialog and anything that isn't in control of user
     text_ : any kind of text that doesn't belong to the prefixes above
     mode_ : these are not actual text strings. They illustrate more than one text items together and possibly are not translatable
---><resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+-->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="text_appName" translatable="false">TrebleShot</string>
     <string name="text_navigationDrawerOpen">Open navigation drawer</string>n
     <string name="text_navigationDrawerClose">Close navigation drawer</string>
@@ -45,7 +45,7 @@
     <string name="text_deleteConfirm">Confirm deletion</string>
     <string name="butn_cancel">Cancel</string>
     <string name="butn_refresh">Refresh</string>
-    <string name="butn_shareTrebleshot">Share this app</string>
+
     <string name="text_about">About</string>
     <string name="butn_close">Close</string>
     <string name="text_deviceModelInfo">Device name</string>
@@ -471,4 +471,12 @@
     <string name="mesg_qrScannerDefaultMode">Back to the default actions for QR codes</string>
     <string name="butn_showAsQrCode">Show as QR code</string>
     <string name="text_showAsQrCode" translatable="false">@string/butn_showAsQrCode</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- mShare -->
+    <string name="butn_sharemShare">Share this app</string>
+    <string name="butn_visitWebsite">Visit Website</string>
+
+
 </resources>
