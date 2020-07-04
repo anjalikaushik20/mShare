@@ -387,8 +387,8 @@ public class ViewTransferActivity
             getDatabase().update(mGroup);
             showMenus();
 
-            if (mGroup.isServedOnWeb)
-                AppUtils.startWebShareActivity(this, true);
+            /*if (mGroup.isServedOnWeb)
+                AppUtils.startWebShareActivity(this, true);*/
         } else if (item.getGroupId() == R.id.actions_abs_view_transfer_activity_settings) {
             mDeviceId = item.getOrder() < mTransactionIndex.assignees.size()
                     ? mTransactionIndex.assignees.get(item.getOrder()).deviceId
@@ -400,9 +400,9 @@ public class ViewTransferActivity
 
             if (fragment != null && fragment.setDeviceId(mDeviceId))
                 fragment.refreshList();
-        } else if (item.getItemId() == R.id.actions_transfer_web_share_shortcut) {
+        } /*else if (item.getItemId() == R.id.actions_transfer_web_share_shortcut) {
             AppUtils.startWebShareActivity(this, false);
-        } else
+        }*/ else
             return super.onOptionsItemSelected(item);
 
         return true;

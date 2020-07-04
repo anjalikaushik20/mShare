@@ -37,7 +37,7 @@ public class HomeFragment
 
         mAdapter.add(new SmartFragmentPagerAdapter.StableItem(0, TransferGroupListFragment.class, null));
         mAdapter.add(new SmartFragmentPagerAdapter.StableItem(1, FileExplorerFragment.class, null));
-        mAdapter.add(new SmartFragmentPagerAdapter.StableItem(2, TextStreamListFragment.class, null));
+        //mAdapter.add(new SmartFragmentPagerAdapter.StableItem(2, TextStreamListFragment.class, null));
 
         mAdapter.createTabs(bottomNavigationView);
         mViewPager.setAdapter(mAdapter);

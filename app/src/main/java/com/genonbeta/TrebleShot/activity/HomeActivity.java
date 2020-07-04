@@ -144,13 +144,13 @@ public class HomeActivity
                     .show();
         }
 
-        if (Keyword.Flavor.googlePlay.equals(AppUtils.getBuildFlavor())) {
+        /*if (Keyword.Flavor.googlePlay.equals(AppUtils.getBuildFlavor())) {
             MenuItem donateItem = mNavigationView.getMenu()
                     .findItem(R.id.menu_activity_main_donate);
 
             if (donateItem != null)
                 donateItem.setVisible(true);
-        }
+        }*/
     }
 
     @Override
@@ -229,7 +229,7 @@ public class HomeActivity
             startActivity(new Intent(this, PreferencesActivity.class));
         } else if (R.id.menu_activity_main_exit == mChosenMenuItemId) {
             exitApp();
-        } else if (R.id.menu_activity_main_donate == mChosenMenuItemId) {
+        } /*else if (R.id.menu_activity_main_donate == mChosenMenuItemId) {
             try {
                 startActivity(new Intent(this, Class.forName("com.genonbeta.TrebleShot.activity.DonationActivity")));
             } catch (ClassNotFoundException e) {
@@ -258,7 +258,7 @@ public class HomeActivity
             builder.show();
         } else if (R.id.menu_activity_feedback == mChosenMenuItemId) {
             AppUtils.createFeedbackIntent(HomeActivity.this);
-        } /*else if (R.id.menu_activity_trustzone == mChosenMenuItemId) {
+        } else if (R.id.menu_activity_trustzone == mChosenMenuItemId) {
             toggleTrustZone();
         }*/
 
@@ -268,7 +268,7 @@ public class HomeActivity
     private void createHeaderView()
     {
         View headerView = mNavigationView.getHeaderView(0);
-        MenuItem surveyItem = mNavigationView.getMenu().findItem(R.id.menu_activity_main_dev_survey);
+        //MenuItem surveyItem = mNavigationView.getMenu().findItem(R.id.menu_activity_main_dev_survey);
         Configuration configuration = getApplication().getResources().getConfiguration();
 
         if (Build.VERSION.SDK_INT >= 24) {
@@ -277,11 +277,11 @@ public class HomeActivity
             if (list.size() > 0)
                 for (int pos = 0; pos < list.size(); pos++)
                     if (list.get(pos).toLanguageTag().startsWith("en")) {
-                        surveyItem.setVisible(true);
+                        //surveyItem.setVisible(true);
                         break;
                     }
         } else
-            surveyItem.setVisible(configuration.locale.toString().startsWith("en"));
+            //surveyItem.setVisible(configuration.locale.toString().startsWith("en"));
 
         if (headerView != null) {
             NetworkDevice localDevice = AppUtils.getLocalDevice(getApplicationContext());
