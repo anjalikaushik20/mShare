@@ -18,8 +18,10 @@
     </style>
 
     <style name="BlackPatch">
+    <!--
         <item name="backgroundDialog">@drawable/background_dialog_black</item>
         <item name="backgroundPopupMenu">@drawable/background_popup_black</item>
+    -->
         <item name="colorPrimary">@color/black_dominant</item>
         <item name="colorPrimaryDark">@color/black_dominant</item>
         <item name="colorPrimaryDark23">@color/black_dominant</item>
