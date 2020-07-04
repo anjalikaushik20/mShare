@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/background_gradient_top_dark"
+        android:background="@drawable/mshare_bg_white"
         android:orientation="vertical"
         android:paddingLeft="8dp"
         android:paddingTop="3dp"
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/background_gradient_bottom_dark"
+        android:background="@drawable/mshare_bg_white"
         android:padding="12dp">
 
         <include layout="@layout/generic_view_selection_rounded_guiding" />
