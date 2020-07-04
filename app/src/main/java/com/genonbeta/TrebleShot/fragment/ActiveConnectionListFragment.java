@@ -136,7 +136,7 @@ public class ActiveConnectionListFragment extends EditableListFragment<ActiveCon
     @Override
     public boolean onDefaultClickAction(EditableListAdapter.EditableViewHolder holder)
     {
-        try {
+        /*try {
             ActiveConnectionListAdapter.AddressedEditableInterface editableInterface =
                     getAdapter().getItem(holder);
 
@@ -144,7 +144,7 @@ public class ActiveConnectionListFragment extends EditableListFragment<ActiveCon
                     editableInterface.getInterface().getAssociatedAddress())).show();
         } catch (NotReadyException e) {
             return false;
-        }
+        }*/
 
         return true;
     }
