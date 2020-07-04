@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:paddingTop="50dp">
 
-    <include layout="@layout/include_layout_profile_picture" />
+    <include layout="@layout/mshare_include_layout_profile_picture" />
 
     <EditText
         android:id="@+id/editText"

@@ -118,11 +118,6 @@
         </activity>
 
         <activity
-            android:name=".activity.AboutActivity"
-            android:label="@string/text_about"
-            android:theme="@style/Theme.TrebleShot.NoActionBar.StaticStatusBar" />
-
-        <activity
             android:name=".activity.ThirdPartyLibrariesActivity"
             android:label="@string/text_thirdPartyLibraries" />
 
@@ -202,6 +197,10 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />

@@ -5,7 +5,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/barcodeScannerFragment"
         android:name="com.genonbeta.TrebleShot.fragment.BarcodeConnectFragment"
         android:layout_width="match_parent"

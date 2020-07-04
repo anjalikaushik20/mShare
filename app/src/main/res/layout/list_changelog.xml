@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/ListContentLayoutStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -9,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/image_check"
@@ -18,7 +20,8 @@
             android:layout_marginEnd="12dp"
             android:layout_marginRight="12dp"
             app:srcCompat="@drawable/ic_check_white_24dp_static"
-            app:tint="?colorSecondary" />
+            app:tint="@color/msBlue"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/text1"

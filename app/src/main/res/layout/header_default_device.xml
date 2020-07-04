@@ -22,6 +22,7 @@
     <TextView
         android:id="@+id/header_default_device_version_text"
         style="@style/TextAppearance.Secondary"
+        android:textColor="@color/msDarkGrey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

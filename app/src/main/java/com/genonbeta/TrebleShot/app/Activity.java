@@ -362,7 +362,7 @@ public abstract class Activity extends AppCompatActivity
                 getBoolean("introduction_shown", false);
     }
 
-    public boolean isAmoledDarkThemeRequested()
+    /*public boolean isAmoledDarkThemeRequested()
     {
         return getDefaultPreferences().getBoolean("amoled_theme", false);
     }
@@ -376,7 +376,7 @@ public abstract class Activity extends AppCompatActivity
     {
         return getDefaultPreferences().getBoolean("custom_fonts", false)
                 && Build.VERSION.SDK_INT >= 16;
-    }
+    }*/
 
     public void loadProfilePictureInto(String deviceName, ImageView imageView)
     {

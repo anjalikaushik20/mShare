@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/icon_size_list_giant"
     android:layout_height="@dimen/icon_size_list_giant"
     android:layout_marginBottom="15dp">
 
     <ImageView
-        android:id="@+id/layout_profile_picture_image_default"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <ImageView
-        android:id="@+id/layout_profile_picture_image_preferred"
+        android:id="@+id/mshare_layout_profile_picture_image_default"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?roundSelector" />
+        android:background="@drawable/mshare_round_background_profile"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/mshare_layout_profile_picture_image_preferred"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?roundSelector"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_gravity="end|bottom"
-        android:background="?rippleBackground"
+        android:background="@color/msBlue"
         android:padding="3dp"
-        app:srcCompat="@drawable/ic_edit_white_24dp"
-        app:tint="@android:color/white" />
+        app:srcCompat="@drawable/mshare_edit_white"
+        app:tint="@android:color/white"
+        tools:ignore="ContentDescription" />
 
 </FrameLayout>

@@ -19,7 +19,7 @@
             android:layout_width="72dp"
             android:layout_height="72dp"
             app:srcCompat="@drawable/ic_check_white_24dp"
-            app:tint="?colorSecondary" />
+            app:tint="@color/msBlue" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/layout_welcome_page_3_request_button"

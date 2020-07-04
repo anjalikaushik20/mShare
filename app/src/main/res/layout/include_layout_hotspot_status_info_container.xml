@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_hotspot_status_info_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -69,7 +70,8 @@
                 android:id="@+id/layout_hotspot_manager_info_container_text2_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_wifi_tethering_white_24dp" />
+                app:srcCompat="@drawable/ic_wifi_tethering_white_24dp"
+                tools:ignore="ContentDescription" />
 
         </FrameLayout>
     </RelativeLayout>
@@ -103,7 +105,8 @@
                 android:id="@+id/layout_hotspot_manager_info_container_text3_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_vpn_key_white_24dp" />
+                app:srcCompat="@drawable/ic_vpn_key_white_24dp"
+                tools:ignore="ContentDescription" />
         </FrameLayout>
     </RelativeLayout>
 </LinearLayout>

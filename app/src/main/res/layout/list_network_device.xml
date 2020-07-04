@@ -1,5 +1,6 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -16,7 +17,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_gravity="center_vertical"
-            app:srcCompat="@drawable/ic_info_white_24dp" />
+            app:srcCompat="@drawable/ic_info_white_24dp"
+            tools:ignore="ContentDescription" />
 
         <FrameLayout
             android:id="@+id/imageContainer"
@@ -39,7 +41,8 @@
                 android:background="?rippleBackground"
                 android:padding="3dp"
                 android:visibility="gone"
-                app:tint="?colorControlNormal" />
+                app:tint="?colorControlNormal"
+                tools:ignore="ContentDescription" />
 
         </FrameLayout>
 

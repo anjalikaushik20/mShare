@@ -1,5 +1,6 @@
 package com.genonbeta.TrebleShot.activity;
 
+import android.app.FragmentManager;
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -28,7 +29,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.genonbeta.CoolSocket.CoolTransfer;
 import com.genonbeta.TrebleShot.R;
 import com.genonbeta.TrebleShot.app.Activity;
 import com.genonbeta.TrebleShot.config.AppConfig;
@@ -219,7 +222,12 @@ public class HomeActivity
         } /*else if (R.id.menu_activity_main_manage_devices == mChosenMenuItemId) {
             startActivity(new Intent(this, ManageDevicesActivity.class));
         }*/ else if (R.id.menu_activity_main_about == mChosenMenuItemId) {
-            startActivity(new Intent(this, Webview_Fragment.class)); //webview added
+            FragmentManager fml = getFragmentManager();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            Webview_Fragment wf = new Webview_Fragment();
+            ft.replace(R.id.activitiy_home_fragment,wf);
+            ft.commit();
+            //startActivity(new Intent(this, Webview_Fragment.class)); //webview added
         } else if (R.id.menu_activity_main_send_application == mChosenMenuItemId) {
             new ShareAppDialog(HomeActivity.this)
                     .show();
@@ -227,6 +235,8 @@ public class HomeActivity
             startActivity(new Intent(this, WebShareActivity.class));
         }*/ else if (R.id.menu_activity_main_preferences == mChosenMenuItemId) {
             startActivity(new Intent(this, PreferencesActivity.class));
+        } else if (R.id.menu_activity_main_home == mChosenMenuItemId){
+            startActivity(new Intent(this, HomeActivity.class)); //Change Activity name
         } else if (R.id.menu_activity_main_exit == mChosenMenuItemId) {
             exitApp();
         } /*else if (R.id.menu_activity_main_donate == mChosenMenuItemId) {
@@ -286,8 +296,8 @@ public class HomeActivity
         if (headerView != null) {
             NetworkDevice localDevice = AppUtils.getLocalDevice(getApplicationContext());
 
-            ImageView imageView = headerView.findViewById(R.id.layout_profile_picture_image_default);
-            ImageView editImageView = headerView.findViewById(R.id.layout_profile_picture_image_preferred);
+            ImageView imageView = headerView.findViewById(R.id.mshare_layout_profile_picture_image_default);
+            ImageView editImageView = headerView.findViewById(R.id.mshare_layout_profile_picture_image_preferred);
             TextView deviceNameText = headerView.findViewById(R.id.header_default_device_name_text);
             TextView versionText = headerView.findViewById(R.id.header_default_device_version_text);
 

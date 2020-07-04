@@ -477,6 +477,11 @@
     <!-- mShare -->
     <string name="butn_sharemShare">Share this app</string>
     <string name="butn_visitWebsite">Visit Website</string>
+    <string name="ms_s">S</string>
+    <string name="ms_home">Home</string>
+    <string name="ms_mshare">mShare</string>
+    <string name="ms_madeI">Designed with love in India</string>
+
 
 
 </resources>
