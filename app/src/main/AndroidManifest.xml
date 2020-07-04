@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrebleShot"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:appComponentFactory">
+        tools:replace="android:appComponentFactory"
+        tools:targetApi="p">
 
         <activity
             android:name=".activity.HomeActivity"
@@ -139,11 +140,6 @@
             android:name=".activity.WelcomeActivity"
             android:label="@string/text_welcome"
             android:theme="@style/Theme.TrebleShot.NoActionBar" />
-
-        <activity
-            android:name=".activity.WebShareActivity"
-            android:label="@string/text_webShare"
-            android:theme="@style/Theme.TrebleShot.NoActionBar.StaticStatusBar" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

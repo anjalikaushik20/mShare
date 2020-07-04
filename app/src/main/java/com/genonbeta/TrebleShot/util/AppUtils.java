@@ -21,7 +21,6 @@ import android.util.TypedValue;
 import com.genonbeta.TrebleShot.App;
 import com.genonbeta.TrebleShot.BuildConfig;
 import com.genonbeta.TrebleShot.R;
-import com.genonbeta.TrebleShot.activity.WebShareActivity;
 import com.genonbeta.TrebleShot.config.AppConfig;
 import com.genonbeta.TrebleShot.config.Keyword;
 import com.genonbeta.TrebleShot.database.AccessDatabase;
@@ -403,15 +402,6 @@ public class AppUtils
                 .interrupt();
 
         return false;
-    }
-
-    public static void startWebShareActivity(Context context, boolean startWebShare) {
-        Intent startIntent = new Intent(context, WebShareActivity.class);
-
-        if (startWebShare)
-            startIntent.putExtra(WebShareActivity.EXTRA_WEBSERVER_START_REQUIRED, true);
-
-        context.startActivity(startIntent);
     }
 
     public static void startForegroundService(Context context, Intent intent)

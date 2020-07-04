@@ -216,16 +216,16 @@ public class HomeActivity
     {
         if (mChosenMenuItemId == 0) {
             // Do nothing
-        } else if (R.id.menu_activity_main_manage_devices == mChosenMenuItemId) {
+        } /*else if (R.id.menu_activity_main_manage_devices == mChosenMenuItemId) {
             startActivity(new Intent(this, ManageDevicesActivity.class));
-        } else if (R.id.menu_activity_main_about == mChosenMenuItemId) {
+        }*/ else if (R.id.menu_activity_main_about == mChosenMenuItemId) {
             startActivity(new Intent(this, Webview_Fragment.class)); //webview added
         } else if (R.id.menu_activity_main_send_application == mChosenMenuItemId) {
             new ShareAppDialog(HomeActivity.this)
                     .show();
-        } else if (R.id.menu_activity_main_web_share == mChosenMenuItemId) {
+        } /*else if (R.id.menu_activity_main_web_share == mChosenMenuItemId) {
             startActivity(new Intent(this, WebShareActivity.class));
-        } else if (R.id.menu_activity_main_preferences == mChosenMenuItemId) {
+        }*/ else if (R.id.menu_activity_main_preferences == mChosenMenuItemId) {
             startActivity(new Intent(this, PreferencesActivity.class));
         } else if (R.id.menu_activity_main_exit == mChosenMenuItemId) {
             exitApp();

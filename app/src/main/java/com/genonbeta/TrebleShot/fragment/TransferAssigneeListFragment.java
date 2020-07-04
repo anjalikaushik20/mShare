@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.PopupMenu;
 
 import com.genonbeta.TrebleShot.R;
-import com.genonbeta.TrebleShot.activity.WebShareActivity;
 import com.genonbeta.TrebleShot.adapter.TransferAssigneeListAdapter;
 import com.genonbeta.TrebleShot.app.EditableListFragment;
 import com.genonbeta.TrebleShot.database.AccessDatabase;
@@ -25,7 +24,6 @@ import com.genonbeta.TrebleShot.util.AppUtils;
 import com.genonbeta.TrebleShot.util.TextUtils;
 import com.genonbeta.TrebleShot.util.TransferUtils;
 import com.genonbeta.TrebleShot.widget.EditableListAdapter;
-import com.genonbeta.android.database.exception.ReconstructionFailedException;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -87,7 +85,7 @@ public class TransferAssigneeListFragment
 
         setEmptyImage(R.drawable.ic_device_hub_white_24dp);
         setEmptyText(getString(R.string.text_noDeviceForTransfer));
-        useEmptyActionButton(getString(R.string.butn_shareOnBrowser), new View.OnClickListener()
+        /*useEmptyActionButton(getString(R.string.butn_shareOnBrowser), new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -98,9 +96,9 @@ public class TransferAssigneeListFragment
                 if (mHeldGroup.isServedOnWeb)
                     AppUtils.startWebShareActivity(getActivity(), true);
             }
-        });
+        });*/
 
-        getEmptyActionButton().setOnLongClickListener(new View.OnLongClickListener()
+        /*getEmptyActionButton().setOnLongClickListener(new View.OnLongClickListener()
         {
             @Override
             public boolean onLongClick(View v)
@@ -108,7 +106,7 @@ public class TransferAssigneeListFragment
                 AppUtils.startWebShareActivity(getActivity(), false);
                 return true;
             }
-        });
+        });*/
 
         updateTransferGroup();
 

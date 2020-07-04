@@ -19,7 +19,6 @@ import com.genonbeta.TrebleShot.R;
 import com.genonbeta.TrebleShot.activity.ConnectionManagerActivity;
 import com.genonbeta.TrebleShot.activity.ContentSharingActivity;
 import com.genonbeta.TrebleShot.activity.ViewTransferActivity;
-import com.genonbeta.TrebleShot.activity.WebShareActivity;
 import com.genonbeta.TrebleShot.adapter.TransferGroupListAdapter;
 import com.genonbeta.TrebleShot.app.EditableListFragment;
 import com.genonbeta.TrebleShot.app.EditableListFragmentImpl;
@@ -137,8 +136,13 @@ public class TransferGroupListFragment
     @Override
     public void onResume()
     {
+
         super.onResume();
-        getActivity().registerReceiver(mReceiver, mFilter);
+        if(super.getActivity() != null){
+            getActivity().registerReceiver(mReceiver, mFilter);
+        }else {
+            throw new RuntimeException("null returned from getActivity()");
+        }
 
         AppUtils.startForegroundService(getActivity(), new Intent(getActivity(), CommunicationService.class)
                 .setAction(CommunicationService.ACTION_REQUEST_TASK_RUNNING_LIST_CHANGE));
@@ -148,7 +152,11 @@ public class TransferGroupListFragment
     public void onPause()
     {
         super.onPause();
-        getActivity().unregisterReceiver(mReceiver);
+        if(super.getActivity() != null){
+            getActivity().unregisterReceiver(mReceiver);
+        } else {
+            throw new RuntimeException("null returned from getActivity()");
+        }
     }
 
     @Override
@@ -267,7 +275,7 @@ public class TransferGroupListFragment
             if (id == R.id.action_mode_group_delete)
                 AppUtils.getDatabase(getFragment().getContext())
                         .removeAsynchronous(getFragment().getActivity(), selectionList);
-            else if (id == R.id.action_mode_group_serve_on_web
+            /*else if (id == R.id.action_mode_group_serve_on_web
                     || id == R.id.action_mode_group_hide_on_web) {
                 boolean success = false;
 
@@ -284,7 +292,7 @@ public class TransferGroupListFragment
                 if (success)
                     AppUtils.startWebShareActivity(getFragment().getActivity(), true);
             } else
-                return super.onActionMenuItemSelected(context, actionMode, item);
+                return super.onActionMenuItemSelected(context, actionMode, item);*/
 
             return true;
         }
