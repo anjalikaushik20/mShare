@@ -132,7 +132,7 @@ public class ToggleMultipleTransferDialog extends AlertDialog.Builder
             text.setText(assignee.device.nickname);
             actionImage.setImageResource(mActiveList.contains(assignee.deviceId)
                     ? R.drawable.ic_pause_white_24dp
-                    : R.drawable.ic_arrow_up_white_24dp);
+                    : R.drawable.mshare_blue_arrow_up);
             NetworkDeviceLoader.showPictureIntoView(assignee.device, image, mIconBuilder);
 
             return convertView;

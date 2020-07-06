@@ -10,7 +10,7 @@
         android:id="@+id/mshare_layout_profile_picture_image_default"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/mshare_include_layout_profile_picture" />
+        android:background="@color/msWhite" />
 
     <ImageView
         android:id="@+id/mshare_layout_profile_picture_image_preferred"
@@ -22,7 +22,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_gravity="end|bottom"
-        android:background="@color/msBlue"
+        android:background="@drawable/mshare_edit_round_background"
         android:padding="3dp"
         app:srcCompat="@drawable/mshare_edit_white"
         app:tint="@android:color/white" />

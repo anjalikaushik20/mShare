@@ -75,7 +75,7 @@ public class TransferListAdapter
 
         mPercentFormat = NumberFormat.getPercentInstance();
         mColorPending = ContextCompat.getColor(context, AppUtils.getReference(context, R.attr.colorControlNormal));
-        mColorDone = ContextCompat.getColor(context, AppUtils.getReference(context, R.attr.colorAccent));
+        mColorDone = ContextCompat.getColor(context,  R.color.msBlue);
         mColorError = ContextCompat.getColor(context, AppUtils.getReference(context, R.attr.colorError));
 
         setSelect(new SQLQuery.Select(AccessDatabase.TABLE_TRANSFER));
@@ -665,8 +665,8 @@ public class TransferListAdapter
         {
             imageView.setVisibility(View.VISIBLE);
             imageView.setImageResource(Type.INCOMING.equals(type)
-                    ? R.drawable.ic_arrow_down_white_24dp
-                    : R.drawable.ic_arrow_up_white_24dp);
+                    ? R.drawable.mshare_blue_arrow_down
+                    : R.drawable.mshare_blue_arrow_up);
         }
 
         @Override

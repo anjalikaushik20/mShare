@@ -30,6 +30,7 @@ import com.genonbeta.TrebleShot.object.NetworkDevice;
 import com.genonbeta.TrebleShot.util.AppUtils;
 import com.genonbeta.TrebleShot.widget.DynamicViewPagerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.trncic.library.DottedProgressBar;
 
 public class WelcomeActivity extends Activity
 {
@@ -52,10 +53,11 @@ public class WelcomeActivity extends Activity
         final ProgressBar progressBar = findViewById(R.id.activity_welcome_progress_bar);
         final ViewPager viewPager = findViewById(R.id.activity_welcome_view_pager);
         final DynamicViewPagerAdapter pagerAdapter = new DynamicViewPagerAdapter();
+        //final DottedProgressBar progressBar = (DottedProgressBar) findViewById(R.id.activity_welcome_progress_bar);
 
         {
             @ColorInt
-            int appliedColor = ContextCompat.getColor(this, AppUtils.getReference(this, R.attr.colorSecondary));
+            int appliedColor = ContextCompat.getColor(this, R.color.msBlue);
 
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
                 Drawable wrapDrawable = DrawableCompat.wrap(progressBar.getProgressDrawable());
@@ -93,7 +95,7 @@ public class WelcomeActivity extends Activity
             setUserProfile();
         }
 
-        pagerAdapter.addView(getLayoutInflater().inflate(R.layout.layout_welcome_page_4, null, false));
+        //pagerAdapter.addView(getLayoutInflater().inflate(R.layout.layout_welcome_page_4, null, false));
 
         {
             View view = getLayoutInflater().inflate(R.layout.layout_welcome_page_5, null, false);
@@ -158,11 +160,11 @@ public class WelcomeActivity extends Activity
             @Override
             public void onPageSelected(int position)
             {
-                OvershootInterpolator interpolator = new OvershootInterpolator();
+               // OvershootInterpolator interpolator = new OvershootInterpolator();
 
                 nextButton.setImageResource(position + 1 >= pagerAdapter.getCount()
                         ? R.drawable.ic_check_white_24dp
-                        : R.drawable.ic_navigate_next_white_24dp);
+                        : R.drawable.mshare_navigate_next_blue);
             }
 
             @Override
@@ -200,8 +202,8 @@ public class WelcomeActivity extends Activity
 
     protected void checkPermissionsState()
     {
-        if (Build.VERSION.SDK_INT < 23)
-            return;
+        /*if (Build.VERSION.SDK_INT < 23)
+            return;*/
 
         boolean permissionsOk = AppUtils.checkRunningConditions(this);
 

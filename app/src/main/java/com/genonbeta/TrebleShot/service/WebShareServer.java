@@ -402,7 +402,7 @@ public class WebShareServer extends NanoHTTPD
         }
 
         if (contentBuilder.length() == 0)
-            contentBuilder.append(makeNotFoundTemplate(R.string.text_listEmptyTransfer,
+            contentBuilder.append(makeNotFoundTemplate(R.string.ms_nothing_to_show,
                     R.string.text_webShareNoContentNotice));
 
         return makePage("icon.png", R.string.text_transfers, contentBuilder.toString());

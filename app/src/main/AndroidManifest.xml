@@ -6,29 +6,33 @@
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:appComponentFactory="@string/app_name"
+
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/text_appName"
+        android:label="@string/ms_app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrebleShot"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:appComponentFactory"
+        tools:replace="android:label"
         tools:targetApi="p">
+
+        <!--tools:replace="android:appComponentFactory" android:appComponentFactory="@string/app_name"-->
 
         <activity
             android:name=".activity.HomeActivity"
-            android:label="@string/text_appName"
+            android:label="@string/ms_app_name"
             android:launchMode="singleTask"
             android:theme="@style/Theme.TrebleShot.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.ShareActivity"
-            android:label="@string/text_appName"
+            android:label="@string/ms_app_name"
             android:theme="@style/Theme.TrebleShot.NoActionBar.StaticStatusBar">
             <intent-filter>
                 <action android:name="genonbeta.intent.action.TREBLESHOT_SEND_TEXT" />
@@ -96,9 +100,6 @@
             android:name=".activity.ManageDevicesActivity"
             android:label="@string/text_manageDevices" />
 
-        <activity
-            android:name=".activity.SearchActivity"
-            android:label="@string/butn_search" />
 
         <activity
             android:name=".activity.PreferencesActivity"

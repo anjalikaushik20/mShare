@@ -371,7 +371,7 @@
     <string name="butn_allow">Allow</string>
     <string name="butn_telegram_channel">Telegram channel</string>
     <string name="mode_middleDot" translatable="false"> · </string>
-    <string name="text_listEmptyTransfer">All transfers appear here</string>
+    <!--<string name="text_listEmptyTransfer">All transfers appear here</string>-->
     <string name="text_transfers">Transfers</string>
     <string name="butn_connectionDetails">Connections details</string>
     <string name="butn_useKnownDevice">Use known devices</string>
@@ -481,7 +481,9 @@
     <string name="ms_home">Home</string>
     <string name="ms_mshare">mShare</string>
     <string name="ms_madeI">Designed with love in India</string>
-
+    <string name="ms_app_name">mShare</string>
+    <string name="ms_btn_configure">Configure</string>
+    <string name="ms_nothing_to_show">Nothing to show</string>
 
 
 </resources>

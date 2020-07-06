@@ -39,6 +39,7 @@ import com.genonbeta.TrebleShot.config.Keyword;
 import com.genonbeta.TrebleShot.dialog.ShareAppDialog;
 import com.genonbeta.TrebleShot.dialog.TransferInfoDialog;
 import com.genonbeta.TrebleShot.fragment.HomeFragment;
+import com.genonbeta.TrebleShot.fragment.TransferGroupListFragment;
 import com.genonbeta.TrebleShot.mShare.Webview_Fragment;
 import com.genonbeta.TrebleShot.object.NetworkDevice;
 import com.genonbeta.TrebleShot.service.CommunicationService;
@@ -236,7 +237,12 @@ public class HomeActivity
         }*/ else if (R.id.menu_activity_main_preferences == mChosenMenuItemId) {
             startActivity(new Intent(this, PreferencesActivity.class));
         } else if (R.id.menu_activity_main_home == mChosenMenuItemId){
-            startActivity(new Intent(this, HomeActivity.class)); //Change Activity name
+            FragmentManager fml = getFragmentManager();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            TransferGroupListFragment tgf = new TransferGroupListFragment();
+            ft.replace(R.id.activitiy_home_fragment,tgf);
+            ft.commit();
+            //startActivity(new Intent(this, TransferGroupListFragment.class)); //Change Activity name
         } else if (R.id.menu_activity_main_exit == mChosenMenuItemId) {
             exitApp();
         } /*else if (R.id.menu_activity_main_donate == mChosenMenuItemId) {
@@ -290,7 +296,7 @@ public class HomeActivity
                         //surveyItem.setVisible(true);
                         break;
                     }
-        } else
+        } //else
             //surveyItem.setVisible(configuration.locale.toString().startsWith("en"));
 
         if (headerView != null) {

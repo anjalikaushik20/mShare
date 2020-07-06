@@ -33,7 +33,9 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/msWhite"
         app:layout_anchor="@id/bar"
+        app:rippleColor="@color/msBlue"
         app:srcCompat="@drawable/ic_qrcode_scan_white_24dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

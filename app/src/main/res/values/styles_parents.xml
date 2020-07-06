@@ -16,7 +16,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark23">@color/colorPrimaryDark23</item>
-        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondary">@color/msBlue</item>
         <item name="colorSurface">@color/colorSurface</item>
         <item name="dialogTheme">@style/Widget.TrebleShot.DialogTheme</item>
         <item name="floatingActionButtonStyle">@style/Widget.TrebleShot.FloatingActionButtonStyle</item>
@@ -47,7 +47,6 @@
         <item name="rectSelector">@drawable/rect_selector</item>
         <item name="rippleBackground">@drawable/ripple_background</item>
         <item name="roundSelector">@drawable/round_selector</item>
-        <item name="roundProgressBar">@drawable/round_progress_bar</item>
         <item name="roundProgressBarShape">@drawable/round_progress_bar_shape</item>
         <item name="selectionAccentColor">@color/selection_accent</item>
         <item name="selectionColor">@color/selection</item>
@@ -122,7 +121,7 @@
         <item name="rectSelector">@drawable/rect_selector_dark</item>
         <item name="rippleBackground">@drawable/ripple_background_dark</item>
         <item name="roundSelector">@drawable/round_selector_dark</item>
-        <item name="roundProgressBar">@drawable/round_progress_bar_dark</item>
+        <!--<item name="roundProgressBar">@drawable/round_progress_bar_dark</item>-->
         <item name="roundProgressBarShape">@drawable/round_progress_bar_shape_dark</item>
     <!--
         <item name="selectionAccentColor">@color/selection_accent_dark</item>

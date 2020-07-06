@@ -94,8 +94,8 @@ public class TransferGroupListFragment
     {
         super.onViewCreated(view, savedInstanceState);
 
-        setEmptyImage(R.drawable.ic_compare_arrows_white_24dp);
-        setEmptyText(getString(R.string.text_listEmptyTransfer));
+        setEmptyImage(R.drawable.mshare_centre_image);
+        setEmptyText(getString(R.string.ms_nothing_to_show));
 
         View viewSend = view.findViewById(R.id.sendLayoutButton);
         View viewReceive = view.findViewById(R.id.receiveLayoutButton);
@@ -136,13 +136,8 @@ public class TransferGroupListFragment
     @Override
     public void onResume()
     {
-
         super.onResume();
-        if(super.getActivity() != null){
-            getActivity().registerReceiver(mReceiver, mFilter);
-        }else {
-            throw new RuntimeException("null returned from getActivity()");
-        }
+        getActivity().registerReceiver(mReceiver, mFilter);
 
         AppUtils.startForegroundService(getActivity(), new Intent(getActivity(), CommunicationService.class)
                 .setAction(CommunicationService.ACTION_REQUEST_TASK_RUNNING_LIST_CHANGE));
@@ -152,11 +147,7 @@ public class TransferGroupListFragment
     public void onPause()
     {
         super.onPause();
-        if(super.getActivity() != null){
-            getActivity().unregisterReceiver(mReceiver);
-        } else {
-            throw new RuntimeException("null returned from getActivity()");
-        }
+        getActivity().unregisterReceiver(mReceiver);
     }
 
     @Override
