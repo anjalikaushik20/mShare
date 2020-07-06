@@ -92,7 +92,9 @@ public class ShareActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_share);
 
-        String action = getIntent() != null ? getIntent().getAction() : null;
+        String action;
+        if (getIntent() != null) action = getIntent().getAction();
+        else action = null;
 
         if (ACTION_SEND.equals(action)
                 || ACTION_SEND_MULTIPLE.equals(action)

@@ -5,7 +5,7 @@
     <item
         android:id="@+id/menu_action_share_trebleshot"
         android:icon="@drawable/ic_send_white_24dp"
-        android:title="@string/butn_shareWithTrebleshot"
+        android:title="@string/ms_butn_shareWithDevice"
         app:showAsAction="always" />
 
     <item
@@ -24,10 +24,6 @@
         android:icon="@drawable/ic_content_copy_white_24dp"
         android:title="@string/butn_copyToClipboard" />
 
-    <item
-        android:id="@+id/menu_action_share"
-        android:icon="@drawable/ic_share_white_24dp"
-        android:title="@string/butn_shareWithOtherApps" />
 
     <item
         android:id="@+id/menu_action_show_as_qr_code"

@@ -134,11 +134,11 @@ public class TextEditorActivity extends Activity implements SnackbarSupport
     @Override
     public void onBackPressed()
     {
-        boolean hasObject = mTextStreamObject != null;
+        //boolean hasObject = mTextStreamObject != null;
         boolean hasEntry = mEditTextEditor.getText().length() > 0;
-        boolean hasSavedText = hasObject && mTextStreamObject.text != null && mTextStreamObject.text.length() > 0;
+        //boolean hasSavedText = hasObject && mTextStreamObject.text != null && mTextStreamObject.text.length() > 0;
 
-        if (!hasEntry || (hasSavedText && mTextStreamObject.text.equals(mEditTextEditor.getText().toString()))
+        /*if (!hasEntry || (hasSavedText && mTextStreamObject.text.equals(mEditTextEditor.getText().toString()))
                 || (System.currentTimeMillis() - mBackPressTime) < 3000)
             super.onBackPressed();
         else
@@ -152,7 +152,7 @@ public class TextEditorActivity extends Activity implements SnackbarSupport
                             finish();
                         }
                     })
-                    .show();
+                    .show();*/
 
         mBackPressTime = System.currentTimeMillis();
     }
@@ -166,9 +166,6 @@ public class TextEditorActivity extends Activity implements SnackbarSupport
 
         menu.findItem(R.id.menu_action_done)
                 .setVisible(applySupported);
-
-        menu.findItem(R.id.menu_action_share)
-                .setVisible(!applySupported);
 
         menu.findItem(R.id.menu_action_share_trebleshot)
                 .setVisible(!applySupported);
@@ -200,13 +197,13 @@ public class TextEditorActivity extends Activity implements SnackbarSupport
                     .setPrimaryClip(ClipData.newPlainText("copiedText", mEditTextEditor.getText().toString()));
 
             createSnackbar(R.string.mesg_textCopiedToClipboard).show();
-        } else if (id == R.id.menu_action_share) {
+        } /*else if (id == R.id.menu_action_share) {
             Intent shareIntent = new Intent(Intent.ACTION_SEND)
                     .putExtra(Intent.EXTRA_TEXT, mEditTextEditor.getText().toString())
                     .setType("text/*");
 
             startActivity(Intent.createChooser(shareIntent, getString(R.string.text_fileShareAppChoose)));
-        } else if (id == R.id.menu_action_share_trebleshot) {
+        }*/ else if (id == R.id.menu_action_share_trebleshot) {
             startActivityForResult(
                     new Intent(TextEditorActivity.this, ConnectionManagerActivity.class)
                             .putExtra(ConnectionManagerActivity.EXTRA_REQUEST_TYPE, ConnectionManagerActivity.RequestType.RETURN_RESULT.toString())

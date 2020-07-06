@@ -50,7 +50,7 @@
     <string name="butn_close">Close</string>
     <string name="text_deviceModelInfo">Device name</string>
     <string name="butn_clearQueue">Clear the queue</string>
-    <string name="butn_shareWithTrebleshot">Share with TrebleShot</string>
+
     <string name="mesg_somethingWentWrong">Something went wrong</string>
     <string name="text_findDevicesHint">No familiar devices</string>
     <string name="text_autoScanDevices">Scan devices automatically</string>
@@ -480,10 +480,11 @@
     <string name="ms_s">S</string>
     <string name="ms_home">Home</string>
     <string name="ms_mshare">mShare</string>
-    <string name="ms_madeI">Designed with love in India</string>
+    <string name="ms_madeI">Designed with 💕in India</string>
     <string name="ms_app_name">mShare</string>
     <string name="ms_btn_configure">Configure</string>
     <string name="ms_nothing_to_show">Nothing to show</string>
-
+    <string name="ms_butn_shareWithDevice">Share with mShare</string>
+    <string name="ms_name_device">Name your Device</string>
 
 </resources>

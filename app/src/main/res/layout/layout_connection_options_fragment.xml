@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="10dp">
-
+<!--
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -40,6 +40,7 @@
                         android:text="@string/text_connectionHelp" />
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:id="@+id/connection_option_guide"
@@ -121,7 +122,7 @@
                         android:text="@string/butn_useExistingNetwork" />
 
                 </LinearLayout>
-
+-->
                 <LinearLayout
                     android:id="@+id/connection_option_scan"
                     android:layout_width="match_parent"
@@ -149,6 +150,7 @@
 
                 </LinearLayout>
 
+<!--
                 <LinearLayout
                     android:id="@+id/connection_option_manual_ip"
                     android:layout_width="match_parent"
@@ -175,6 +177,7 @@
                         android:text="@string/butn_enterIpAddress" />
 
                 </LinearLayout>
+-->
 
                 <!--
                 <LinearLayout
@@ -242,8 +245,8 @@
             android:id="@+id/connection_option_device_list"
             android:name="com.genonbeta.TrebleShot.fragment.CustomNetworkDeviceListFragment"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
+            android:layout_height="450dp"
             android:tag="deviceListFragment" />
-
     </LinearLayout>
+
 </androidx.core.widget.NestedScrollView>

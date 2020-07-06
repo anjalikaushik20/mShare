@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp">
-
+<!--
         <TextView
             android:id="@+id/layout_network_manager_info_container_text3"
             style="@style/TextAppearance.Secondary"
@@ -105,5 +105,6 @@
                 app:srcCompat="@drawable/ic_device_hub_white_24dp" />
 
         </FrameLayout>
+-->
     </RelativeLayout>
 </LinearLayout>

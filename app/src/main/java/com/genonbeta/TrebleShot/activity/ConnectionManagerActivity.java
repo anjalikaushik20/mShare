@@ -1,5 +1,6 @@
 package com.genonbeta.TrebleShot.activity;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -280,6 +281,7 @@ public class ConnectionManagerActivity
         return Snackbar.make(findViewById(R.id.activity_connection_establishing_content_view), getString(resId, objects), Snackbar.LENGTH_LONG);
     }
 
+    @SuppressLint("SupportAnnotationUsage")
     @IdRes
     public AvailableFragment getShowingFragmentId()
     {
@@ -398,15 +400,15 @@ public class ConnectionManagerActivity
                         case R.id.connection_option_devices:
                             updateFragment(AvailableFragment.UseKnownDevice);
                             break;
-                        case R.id.connection_option_hotspot:
-                            updateFragment(AvailableFragment.CreateHotspot);
-                            break;
-                        case R.id.connection_option_network:
-                            updateFragment(AvailableFragment.UseExistingNetwork);
-                            break;
-                        case R.id.connection_option_manual_ip:
-                            updateFragment(AvailableFragment.EnterIpAddress);
-                            break;
+                        //case R.id.connection_option_hotspot:
+                          //  updateFragment(AvailableFragment.CreateHotspot);
+                            //break;
+                        //case R.id.connection_option_network:
+                          //  updateFragment(AvailableFragment.UseExistingNetwork);
+                            //break;
+                        //case R.id.connection_option_manual_ip:
+                          //  updateFragment(AvailableFragment.EnterIpAddress);
+                            //break;
                         case R.id.connection_option_scan:
                             startCodeScanner();
                     }
@@ -414,20 +416,20 @@ public class ConnectionManagerActivity
             };
 
             view.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
-            view.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
-            view.findViewById(R.id.connection_option_network).setOnClickListener(listener);
-            view.findViewById(R.id.connection_option_scan).setOnClickListener(listener);
-            view.findViewById(R.id.connection_option_manual_ip).setOnClickListener(listener);
+            //view.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
+            //view.findViewById(R.id.connection_option_network).setOnClickListener(listener);
+            //view.findViewById(R.id.connection_option_scan).setOnClickListener(listener);
+            //view.findViewById(R.id.connection_option_manual_ip).setOnClickListener(listener);
 
-            view.findViewById(R.id.connection_option_guide).setOnClickListener(new View.OnClickListener()
-            {
+            //view.findViewById(R.id.connection_option_guide).setOnClickListener(new View.OnClickListener()
+            /*{
                 @Override
                 public void onClick(View v)
                 {
                     new ConnectionSetUpAssistant(getActivity())
                             .startShowing();
                 }
-            });
+            });*/
 
             return view;
         }

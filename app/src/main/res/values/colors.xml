@@ -61,5 +61,6 @@
     <color name="msBlue">#3B8DEB</color>
     <color name="msDarkGrey">#505050</color>
     <color name="msBlack">#000000</color>
+    <color name="msTransparent">#00ffffff</color>
 
 </resources>

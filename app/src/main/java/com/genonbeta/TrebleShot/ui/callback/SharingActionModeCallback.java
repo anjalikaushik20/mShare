@@ -1,11 +1,14 @@
 package com.genonbeta.TrebleShot.ui.callback;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.appcompat.view.menu.MenuBuilder;
 
 import com.genonbeta.TrebleShot.R;
 import com.genonbeta.TrebleShot.activity.ShareActivity;
@@ -37,6 +40,7 @@ public class SharingActionModeCallback<T extends Shareable> extends EditableList
         return true;
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateActionMenu(Context context, PowerfulActionMode actionMode, Menu menu)
     {
@@ -53,12 +57,13 @@ public class SharingActionModeCallback<T extends Shareable> extends EditableList
         List<T> selectedItemList = new ArrayList<>(getFragment().getSelectionConnection().getSelectedItemList());
 
         if (selectedItemList.size() > 0
-                && (id == R.id.action_mode_share_trebleshot || id == R.id.action_mode_share_all_apps)) {
+                && (id == R.id.mshare_action_mode_share)) {
             Intent shareIntent = new Intent()
                     .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     .setAction((item.getItemId() == R.id.action_mode_share_all_apps)
                             ? (selectedItemList.size() > 1 ? Intent.ACTION_SEND_MULTIPLE : Intent.ACTION_SEND)
                             : (selectedItemList.size() > 1 ? ShareActivity.ACTION_SEND_MULTIPLE : ShareActivity.ACTION_SEND));
+
 
             if (selectedItemList.size() > 1) {
                 ShareableListFragment.MIMEGrouper mimeGrouper = new ShareableListFragment.MIMEGrouper();

@@ -31,7 +31,7 @@ public class HomeFragment
     {
         final View view = inflater.inflate(R.layout.layout_home_fragment, container, false);
 
-        final BottomNavigationView bottomNavigationView = view.findViewById(R.id.layout_home_bottom_navigation_view);
+        //final BottomNavigationView bottomNavigationView = view.findViewById(R.id.layout_home_bottom_navigation_view);
         mViewPager = view.findViewById(R.id.layout_home_view_pager);
         mAdapter = new SmartFragmentPagerAdapter(getContext(), getChildFragmentManager());
 
@@ -39,7 +39,7 @@ public class HomeFragment
         mAdapter.add(new SmartFragmentPagerAdapter.StableItem(1, FileExplorerFragment.class, null));
         //mAdapter.add(new SmartFragmentPagerAdapter.StableItem(2, TextStreamListFragment.class, null));
 
-        mAdapter.createTabs(bottomNavigationView);
+        //mAdapter.createTabs(bottomNavigationView);
         mViewPager.setAdapter(mAdapter);
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener()
@@ -51,10 +51,15 @@ public class HomeFragment
             }
 
             @Override
-            public void onPageSelected(int i)
-            {
-                bottomNavigationView.setSelectedItemId(i);
+            public void onPageSelected(int position) {
+                
             }
+
+            //@Override
+            //public void onPageSelected(int i)
+            //{
+            //    bottomNavigationView.setSelectedItemId(i);
+            //}
 
             @Override
             public void onPageScrollStateChanged(int i)
@@ -63,7 +68,7 @@ public class HomeFragment
             }
         });
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
+        /*bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
         {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
@@ -71,7 +76,7 @@ public class HomeFragment
                 mViewPager.setCurrentItem(menuItem.getOrder());
                 return true;
             }
-        });
+        });*/
 
         return view;
     }

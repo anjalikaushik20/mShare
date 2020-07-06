@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/mshare_background_design">
 
     <include
         android:id="@+id/mainContainer"
@@ -18,7 +20,8 @@
         android:layout_above="@id/mainContainer"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:text="@string/text_introSetUpProfile"
+        android:text="@string/ms_name_device"
+        app:fontFamily="@font/roboto_regular"
         android:textSize="@dimen/font_size_title" />
 
 </RelativeLayout>

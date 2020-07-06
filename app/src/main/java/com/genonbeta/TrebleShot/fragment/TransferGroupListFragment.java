@@ -73,7 +73,7 @@ public class TransferGroupListFragment
         setFilteringSupported(true);
         setDefaultOrderingCriteria(TransferGroupListAdapter.MODE_SORT_ORDER_DESCENDING);
         setDefaultSortingCriteria(TransferGroupListAdapter.MODE_SORT_BY_DATE);
-        setDefaultGroupingCriteria(TransferGroupListAdapter.MODE_GROUP_BY_DATE);
+        //setDefaultGroupingCriteria(TransferGroupListAdapter.MODE_GROUP_BY_DATE);
         setDefaultSelectionCallback(new SelectionCallback(this));
         setUseDefaultPaddingDecoration(true);
         setUseDefaultPaddingDecorationSpaceForEdges(true);
@@ -157,12 +157,12 @@ public class TransferGroupListFragment
         options.put(getString(R.string.text_sortBySize), TransferGroupListAdapter.MODE_SORT_BY_SIZE);
     }
 
-    @Override
+    /*@Override
     public void onGroupingOptions(Map<String, Integer> options)
     {
         options.put(getString(R.string.text_groupByNothing), TransferGroupListAdapter.MODE_GROUP_BY_NOTHING);
         options.put(getString(R.string.text_groupByDate), TransferGroupListAdapter.MODE_GROUP_BY_DATE);
-    }
+    }*/
 
     @Override
     public TransferGroupListAdapter onAdapter()
