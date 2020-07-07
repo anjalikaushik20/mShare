@@ -120,7 +120,7 @@
     -->
         <item name="rectSelector">@drawable/rect_selector_dark</item>
         <item name="rippleBackground">@drawable/ripple_background_dark</item>
-        <item name="roundSelector">@drawable/round_selector_dark</item>
+        <!--<item name="roundSelector">@drawable/round_selector_dark</item>-->
         <!--<item name="roundProgressBar">@drawable/round_progress_bar_dark</item>-->
         <item name="roundProgressBarShape">@drawable/round_progress_bar_shape_dark</item>
     <!--
@@ -132,7 +132,7 @@
         <item name="snackbarBackground">@drawable/background_snackbar_dark</item>
     -->
         <item name="stateSelectedImage">@drawable/state_selected_image_dark</item>
-        <item name="stateSelectedImageRounded">@drawable/state_selected_image_rounded_dark</item>
+        <!--<item name="stateSelectedImageRounded">@drawable/state_selected_image_rounded_dark</item>-->
     <!--
         <item name="stateSelectedImageRoundedGuiding">
             @drawable/state_selected_image_rounded_guiding_dark

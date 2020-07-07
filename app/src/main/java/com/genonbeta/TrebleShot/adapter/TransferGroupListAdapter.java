@@ -163,10 +163,10 @@ public class TransferGroupListAdapter
                         image.setImageResource(object.index.outgoingCount > 0
                                 ? R.drawable.ic_compare_arrows_white_24dp
                                 : R.drawable.ic_error_outline_white_24dp);
-                    /*else
+                    else
                         image.setImageResource(object.index.outgoingCount > 0
                                 ? R.drawable.mshare_blue_arrow_up
-                                : R.drawable.mshare_blue_arrow_down);*/
+                                : R.drawable.mshare_blue_arrow_down);
                 }
 
                 statusLayoutWeb.setVisibility(object.index.outgoingCount > 0 && object.isServedOnWeb
