@@ -94,8 +94,8 @@ public class TransferGroupListFragment
     {
         super.onViewCreated(view, savedInstanceState);
 
-        setEmptyImage(R.drawable.mshare_centre_image);
-        setEmptyText(getString(R.string.ms_nothing_to_show));
+        setEmptyImage(R.drawable.centre_image);
+        //setEmptyText(getString(R.string.ms_nothing_to_show));
 
         View viewSend = view.findViewById(R.id.sendLayoutButton);
         View viewReceive = view.findViewById(R.id.receiveLayoutButton);

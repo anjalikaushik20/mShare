@@ -8,8 +8,8 @@
         android:allowBackup="true"
 
         android:fullBackupContent="true"
-        android:icon="@mipmap/ic_launcher"
         android:label="@string/ms_app_name"
+        android:icon="@mipmap/ic_mshare"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrebleShot"
         tools:ignore="GoogleAppIndexingWarning"
