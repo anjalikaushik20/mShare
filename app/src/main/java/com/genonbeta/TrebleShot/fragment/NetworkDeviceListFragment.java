@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -99,8 +100,12 @@ public class NetworkDeviceListFragment
 
         Context context = container.getContext();
 
-        mSwipeRefreshLayout = new SwipeRefreshLayout(getActivity());
+        if(getActivity() != null) {
+            mSwipeRefreshLayout = new SwipeRefreshLayout(getActivity());
+        }
 
+        assert mSwipeRefreshLayout != null;
+        assert getActivity() != null;
         mSwipeRefreshLayout.setColorSchemeColors(ContextCompat
                 .getColor(context, AppUtils.getReference(getActivity(), R.attr.colorAccent)));
 
@@ -281,6 +286,7 @@ public class NetworkDeviceListFragment
     public void onResume()
     {
         super.onResume();
+        assert getActivity() != null;
         getActivity().registerReceiver(mStatusReceiver, mIntentFilter);
 
         refreshList();
@@ -293,13 +299,14 @@ public class NetworkDeviceListFragment
     public void onPause()
     {
         super.onPause();
+        assert getActivity() != null;
         getActivity().unregisterReceiver(mStatusReceiver);
 
         mNsdDiscovery.stopDiscovering();
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater)
     {
         super.onCreateOptionsMenu(menu, inflater);
 
@@ -377,6 +384,7 @@ public class NetworkDeviceListFragment
         if (device instanceof NetworkDeviceListAdapter.HotspotNetwork) {
             final NetworkDeviceListAdapter.HotspotNetwork hotspotNetwork = (NetworkDeviceListAdapter.HotspotNetwork) device;
 
+            assert getContext() != null;
             AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
 
             builder.setTitle(hotspotNetwork.nickname);
@@ -393,6 +401,7 @@ public class NetworkDeviceListFragment
 
             builder.show();
         } else
+            assert getActivity() != null;
             new DeviceInfoDialog(getActivity(), AppUtils.getDatabase(getContext()), device).show();
     }
 
@@ -402,6 +411,11 @@ public class NetworkDeviceListFragment
 
         if (!AppUtils.toggleDeviceScanning(getContext()))
             Toast.makeText(getContext(), R.string.mesg_stopping, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public View onViewCreated(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return null;
     }
 
     public void setDeviceSelectedListener(NetworkDeviceSelectedListener listener)

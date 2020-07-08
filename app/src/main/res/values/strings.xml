@@ -486,5 +486,7 @@
     <string name="ms_nothing_to_show">Nothing to show</string>
     <string name="ms_butn_shareWithDevice">Share with mShare</string>
     <string name="ms_name_device">Name your Device</string>
+    <string name="ms_send">Send</string>
+    <string name="ms_recieve">Receive</string>
 
 </resources>

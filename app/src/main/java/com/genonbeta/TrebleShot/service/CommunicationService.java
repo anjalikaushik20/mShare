@@ -198,13 +198,13 @@ public class CommunicationService extends Service
             });
 
 
-        try {
+        /*try {
             mWebShareServer = new WebShareServer(this, AppConfig.SERVER_PORT_WEBSHARE);
             mWebShareServer.setAsyncRunner(new WebShareServer.BoundRunner(
                     Executors.newFixedThreadPool(AppConfig.WEB_SHARE_CONNECTION_MAX)));
         } catch (Throwable t) {
             Log.e(TAG, "Failed to start Web Share Server");
-        }
+        }*/
     }
 
     @Override

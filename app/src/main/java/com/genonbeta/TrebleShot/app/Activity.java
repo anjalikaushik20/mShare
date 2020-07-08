@@ -45,6 +45,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("rawtypes")
 public abstract class Activity extends AppCompatActivity
 {
     public static final int REQUEST_PICK_PROFILE_PHOTO = 1000;

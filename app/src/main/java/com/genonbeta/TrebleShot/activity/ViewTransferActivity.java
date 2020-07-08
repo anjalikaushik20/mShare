@@ -514,10 +514,10 @@ public class ViewTransferActivity
         } else
             mToggleMenu.setVisible(false);
 
-        mToggleBrowserShare.setTitle(mGroup.isServedOnWeb ? R.string.butn_hideOnBrowser
-                : R.string.butn_shareOnBrowser);
-        mToggleBrowserShare.setVisible(hasOutgoing || mGroup.isServedOnWeb);
-        mWebShareShortcut.setVisible(hasOutgoing && mGroup.isServedOnWeb);
+//        mToggleBrowserShare.setTitle(mGroup.isServedOnWeb ? R.string.butn_hideOnBrowser
+   //             : R.string.butn_shareOnBrowser);
+   //     mToggleBrowserShare.setVisible(hasOutgoing || mGroup.isServedOnWeb);
+//        mWebShareShortcut.setVisible(hasOutgoing && mGroup.isServedOnWeb);
         mCnTestMenu.setVisible(hasAnyFiles);
         mAddDeviceMenu.setVisible(hasOutgoing);
         mRetryMenu.setVisible(hasIncoming);

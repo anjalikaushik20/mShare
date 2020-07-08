@@ -44,8 +44,9 @@ import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 
 import static com.genonbeta.TrebleShot.R.layout.layout_connection_options_fragment;
+import static com.genonbeta.TrebleShot.R.layout.layput_connection_options_recieve_btn;
 
-public class ConnectionManagerActivity
+public class ConnectionManagerRecieveActivity
         extends Activity
         implements SnackbarSupport
 {
@@ -81,8 +82,8 @@ public class ConnectionManagerActivity
 
                 finish();
             } else {
-                ConnectionUtils connectionUtils = ConnectionUtils.getInstance(ConnectionManagerActivity.this);
-                UIConnectionUtils uiConnectionUtils = new UIConnectionUtils(connectionUtils, ConnectionManagerActivity.this);
+                ConnectionUtils connectionUtils = ConnectionUtils.getInstance(ConnectionManagerRecieveActivity.this);
+                UIConnectionUtils uiConnectionUtils = new UIConnectionUtils(connectionUtils, ConnectionManagerRecieveActivity.this);
 
                 UITask uiTask = new UITask()
                 {
@@ -108,7 +109,7 @@ public class ConnectionManagerActivity
                     }
                 };
 
-                uiConnectionUtils.makeAcquaintance(ConnectionManagerActivity.this, uiTask,
+                uiConnectionUtils.makeAcquaintance(ConnectionManagerRecieveActivity.this, uiTask,
                         connection.ipAddress, -1, registeredListener);
             }
 
@@ -149,8 +150,8 @@ public class ConnectionManagerActivity
                     NetworkDevice.Connection connection = new NetworkDevice.Connection(device.deviceId, intent.getStringExtra(CommunicationService.EXTRA_CONNECTION_ADAPTER_NAME));
 
                     try {
-                        AppUtils.getDatabase(ConnectionManagerActivity.this).reconstruct(device);
-                        AppUtils.getDatabase(ConnectionManagerActivity.this).reconstruct(connection);
+                        AppUtils.getDatabase(ConnectionManagerRecieveActivity.this).reconstruct(device);
+                        AppUtils.getDatabase(ConnectionManagerRecieveActivity.this).reconstruct(connection);
 
                         mDeviceSelectionListener.onNetworkDeviceSelected(device, connection);
                     } catch (Exception e) {
@@ -160,7 +161,7 @@ public class ConnectionManagerActivity
             } else if (mRequestType.equals(RequestType.MAKE_ACQUAINTANCE)) {
                 if (CommunicationService.ACTION_INCOMING_TRANSFER_READY.equals(intent.getAction())
                         && intent.hasExtra(CommunicationService.EXTRA_GROUP_ID)) {
-                    ViewTransferActivity.startInstance(ConnectionManagerActivity.this,
+                    ViewTransferActivity.startInstance(ConnectionManagerRecieveActivity.this,
                             intent.getLongExtra(CommunicationService.EXTRA_GROUP_ID, -1));
                     finish();
                 }
@@ -191,7 +192,7 @@ public class ConnectionManagerActivity
         mFilter.addAction(CommunicationService.ACTION_DEVICE_ACQUAINTANCE);
         mFilter.addAction(CommunicationService.ACTION_INCOMING_TRANSFER_READY);
 
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -255,7 +256,7 @@ public class ConnectionManagerActivity
 
         if (getSupportActionBar() != null) {
             CharSequence titleCurrent = fragment instanceof TitleSupport
-                    ? ((TitleSupport) fragment).getTitle(ConnectionManagerActivity.this)
+                    ? ((TitleSupport) fragment).getTitle(ConnectionManagerRecieveActivity.this)
                     : getString(R.string.text_connectDevices);
 
             if (isOptions)
@@ -392,57 +393,7 @@ public class ConnectionManagerActivity
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
         {
-            View view = inflater.inflate(layout_connection_options_fragment, container, false);
-
-            View.OnClickListener listener = new View.OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    switch (v.getId()) {
-                        case R.id.connection_option_devices:
-                            updateFragment(AvailableFragment.UseKnownDevice);
-                            break;
-                        //case R.id.connection_option_hotspot:
-                          //  updateFragment(AvailableFragment.CreateHotspot);
-                            //break;
-                        //case R.id.connection_option_network:
-                          //  updateFragment(AvailableFragment.UseExistingNetwork);
-                            //break;
-                        //case R.id.connection_option_manual_ip:
-                          //  updateFragment(AvailableFragment.EnterIpAddress);
-                            //break;
-                        case R.id.connection_option_scan:
-                            startCodeScanner();
-                    }
-                }
-            };
-
-            view.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
-            //view.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
-            //view.findViewById(R.id.connection_option_network).setOnClickListener(listener);
-            view.findViewById(R.id.connection_option_scan).setOnClickListener(listener);
-            //view.findViewById(R.id.connection_option_manual_ip).setOnClickListener(listener);
-
-            //view.findViewById(R.id.connection_option_guide).setOnClickListener(new View.OnClickListener()
-            /*{
-                @Override
-                public void onClick(View v)
-                {
-                    new ConnectionSetUpAssistant(getActivity())
-                            .startShowing();
-                }
-            });*/
-
-
-            return view;
-        }
-
-        @Override
-        public View onViewCreated(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            super.onViewCreated(container, savedInstanceState);
-
-            View viewR = inflater.inflate(R.layout.layput_connection_options_recieve_btn, container, false);
+            View view = inflater.inflate(layput_connection_options_recieve_btn, container, false);
 
             View.OnClickListener listener = new View.OnClickListener()
             {
@@ -454,16 +405,24 @@ public class ConnectionManagerActivity
                             updateFragment(AvailableFragment.UseKnownDevice);
                             break;
                         case R.id.connection_option_hotspot:
-                            updateFragment(AvailableFragment.CreateHotspot);
-                            break;
+                          updateFragment(AvailableFragment.CreateHotspot);
+                        break;
                     }
                 }
             };
 
-            viewR.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
-            viewR.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
+            view.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
+            view.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
 
-            return viewR;
+            return view;
+        }
+
+        @Override
+        public View onViewCreated(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+            super.onViewCreated(container, savedInstanceState);
+
+
+            return null;
         }
 
         @Override

@@ -1,5 +1,6 @@
 package com.genonbeta.TrebleShot.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.genonbeta.TrebleShot.R;
 import com.genonbeta.TrebleShot.activity.ConnectionManagerActivity;
+import com.genonbeta.TrebleShot.activity.ConnectionManagerRecieveActivity;
 import com.genonbeta.TrebleShot.activity.ContentSharingActivity;
 import com.genonbeta.TrebleShot.activity.ViewTransferActivity;
 import com.genonbeta.TrebleShot.adapter.TransferGroupListAdapter;
@@ -33,6 +35,7 @@ import com.genonbeta.android.database.SQLQuery;
 import com.genonbeta.android.framework.widget.PowerfulActionMode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -83,7 +86,7 @@ public class TransferGroupListFragment
     @Override
     protected RecyclerView onListView(View mainContainer, ViewGroup listViewContainer)
     {
-        View adaptedView = getLayoutInflater().inflate(R.layout.layout_transfer_group_list, null, false);
+        @SuppressLint("InflateParams") View adaptedView = getLayoutInflater().inflate(R.layout.layout_transfer_group_list, null, false);
         ((ViewGroup) mainContainer).addView(adaptedView);
 
         return super.onListView(mainContainer, (FrameLayout) adaptedView.findViewById(R.id.fragmentContainer));
@@ -93,6 +96,7 @@ public class TransferGroupListFragment
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
+        final String[] flag = new String[1];
 
         setEmptyImage(R.drawable.centre_image);
         //setEmptyText(getString(R.string.ms_nothing_to_show));
@@ -105,7 +109,8 @@ public class TransferGroupListFragment
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(getContext(), ContentSharingActivity.class));
+                startActivity(new Intent(getContext(), ContentSharingActivity.class)
+                        .putExtra(ConnectionManagerActivity.EXTRA_ACTIVITY_SUBTITLE, getString(R.string.ms_send)));
             }
         });
 
@@ -114,9 +119,9 @@ public class TransferGroupListFragment
             @Override
             public void onClick(View v)
             {
-                startActivity(new Intent(getContext(), ConnectionManagerActivity.class)
-                        .putExtra(ConnectionManagerActivity.EXTRA_ACTIVITY_SUBTITLE, getString(R.string.text_receive))
-                        .putExtra(ConnectionManagerActivity.EXTRA_REQUEST_TYPE, ConnectionManagerActivity.RequestType.MAKE_ACQUAINTANCE.toString()));
+                startActivity(new Intent(getContext(), ConnectionManagerRecieveActivity.class)
+                        .putExtra(ConnectionManagerRecieveActivity.EXTRA_ACTIVITY_SUBTITLE, getString(R.string.ms_recieve))
+                        .putExtra(ConnectionManagerRecieveActivity.EXTRA_REQUEST_TYPE, ConnectionManagerActivity.RequestType.MAKE_ACQUAINTANCE.toString()));
             }
         });
     }
@@ -137,7 +142,9 @@ public class TransferGroupListFragment
     public void onResume()
     {
         super.onResume();
-        getActivity().registerReceiver(mReceiver, mFilter);
+        if(super.getActivity() != null){
+            getActivity().registerReceiver(mReceiver, mFilter);
+        }
 
         AppUtils.startForegroundService(getActivity(), new Intent(getActivity(), CommunicationService.class)
                 .setAction(CommunicationService.ACTION_REQUEST_TASK_RUNNING_LIST_CHANGE));
@@ -147,7 +154,9 @@ public class TransferGroupListFragment
     public void onPause()
     {
         super.onPause();
-        getActivity().unregisterReceiver(mReceiver);
+        if(getActivity() != null) {
+            getActivity().unregisterReceiver(mReceiver);
+        }
     }
 
     @Override
@@ -203,7 +212,9 @@ public class TransferGroupListFragment
     public boolean onDefaultClickAction(GroupEditableListAdapter.GroupViewHolder holder)
     {
         try {
-            ViewTransferActivity.startInstance(getActivity(), getAdapter().getItem(holder).groupId);
+            if(getActivity() != null) {
+                ViewTransferActivity.startInstance(getActivity(), getAdapter().getItem(holder).groupId);
+            }
             return true;
         } catch (Exception e) {
         }

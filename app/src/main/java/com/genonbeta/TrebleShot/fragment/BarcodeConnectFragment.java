@@ -173,6 +173,7 @@ public class BarcodeConnectFragment
     {
         int id = item.getItemId();
 
+        assert getActivity() != null;
         if (id == R.id.show_help)
             new AlertDialog.Builder(getActivity())
                     .setMessage(R.string.text_scanQRCodeHelp)
@@ -218,7 +219,7 @@ public class BarcodeConnectFragment
     public void onResume()
     {
         super.onResume();
-
+        assert getActivity() != null;
         getContext().registerReceiver(mReceiver, mIntentFilter);
         updateState();
 
@@ -231,6 +232,7 @@ public class BarcodeConnectFragment
     {
         super.onPause();
 
+        assert getActivity() != null;
         getContext().unregisterReceiver(mReceiver);
         mBarcodeView.pauseAndWait();
     }
@@ -297,6 +299,7 @@ public class BarcodeConnectFragment
                 else {
                     mBarcodeView.pauseAndWait();
 
+                    assert getActivity() != null;
                     new AlertDialog.Builder(getActivity())
                             .setMessage(R.string.mesg_errorNotSameNetwork)
                             .setNegativeButton(R.string.butn_close, null)
@@ -319,6 +322,7 @@ public class BarcodeConnectFragment
 
             mBarcodeView.pauseAndWait();
 
+            assert getActivity() != null;
             new AlertDialog.Builder(getActivity())
                     .setTitle(R.string.text_unrecognizedQrCode)
                     .setMessage(code)
@@ -371,7 +375,13 @@ public class BarcodeConnectFragment
 
     protected void makeAcquaintance(Object object, int accessPin)
     {
+        assert getActivity() != null;
         mConnectionUtils.makeAcquaintance(getActivity(), BarcodeConnectFragment.this, object, accessPin, mRegisteredListener);
+    }
+
+    @Override
+    public View onViewCreated(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return null;
     }
 
     public void setDeviceSelectedListener(NetworkDeviceSelectedListener listener)
@@ -413,6 +423,7 @@ public class BarcodeConnectFragment
             return;
 
         final boolean wifiEnabled = mConnectionUtils.getConnectionUtils().getWifiManager().isWifiEnabled();
+        assert getContext() != null;
         final boolean hasCameraPermission = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA)
                 == PackageManager.PERMISSION_GRANTED;
         final boolean hasLocationPermission = Build.VERSION.SDK_INT < 26 // With Android Oreo, to gather Wi-Fi information, minimal access to location is needed
@@ -432,10 +443,12 @@ public class BarcodeConnectFragment
                     @Override
                     public void onClick(View v)
                     {
+                        assert getActivity() != null;
                         ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA}, REQUEST_PERMISSION_CAMERA);
                     }
                 });
 
+                assert getActivity() != null;
                 if (!mPermissionRequestedCamera)
                     ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA}, REQUEST_PERMISSION_CAMERA);
 
@@ -454,6 +467,7 @@ public class BarcodeConnectFragment
                     }
                 });
 
+                assert getActivity() != null;
                 if (!mPermissionRequestedLocation)
                     ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_PERMISSION_CAMERA);
 

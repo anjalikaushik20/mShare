@@ -16,6 +16,6 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?backgroundGradientTop" />
+        android:background="@color/msTransparent" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
