@@ -54,7 +54,7 @@ public class CommunicationNotificationHelper
 
         builder.append(getContext().getString(R.string.text_communicationServiceRunning));
 
-        notification.setSmallIcon(R.drawable.ic_trebleshot_rounded_white_24dp_static)
+        notification.setSmallIcon(R.drawable.mshare_m_appbar)
                 .setContentTitle(builder.toString())
                 .setContentText(getContext().getString(R.string.text_communicationServiceStop))
                 .setAutoCancel(true)

@@ -88,10 +88,10 @@ public class NetworkManagerFragment
 
         mColorPassiveState = ColorStateList.valueOf(ContextCompat.getColor(getContext(), AppUtils.getReference(getContext(), R.attr.colorPassive)));
         mCodeView = view.findViewById(R.id.layout_network_manager_qr_image);
-        mContainerText1 = view.findViewById(R.id.layout_network_manager_info_container_text1_container);
+ //       mContainerText1 = view.findViewById(R.id.layout_network_manager_info_container_text1_container);
         mContainerText2 = view.findViewById(R.id.layout_network_manager_info_container_text2_container);
         mContainerText3 = view.findViewById(R.id.layout_network_manager_info_container_text3_container);
-        mText1 = view.findViewById(R.id.layout_network_manager_info_container_text1);
+ //       mText1 = view.findViewById(R.id.layout_network_manager_info_container_text1);
         mText2 = view.findViewById(R.id.layout_network_manager_info_container_text2);
         //mText3 = view.findViewById(R.id.layout_network_manager_info_container_text3);
         mActionButton = view.findViewById(R.id.layout_network_manager_info_toggle_button);

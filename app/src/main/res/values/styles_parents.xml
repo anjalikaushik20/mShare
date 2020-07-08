@@ -31,12 +31,12 @@
         <item name="android:windowBackground">@color/windowBackground</item>
 
         <!-- app styling -->
-        <item name="backgroundDialog">@drawable/background_dialog</item>
+        <item name="backgroundDialog">@drawable/mshare_bg_white</item>
         <item name="backgroundEdgeAction">@drawable/background_edge_action</item>
-        <item name="backgroundGradient">@drawable/background_gradient</item>
-        <item name="backgroundGradientBottom">@drawable/background_gradient_bottom</item>
-        <item name="backgroundGradientTop">@drawable/background_gradient_top</item>
-        <item name="backgroundPopupMenu">@drawable/background_popup_menu</item>
+        <item name="backgroundGradient">@drawable/mshare_bg_white</item>
+        <item name="backgroundGradientBottom">@drawable/mshare_bg_white</item>
+        <item name="backgroundGradientTop">@drawable/mshare_bg_white</item>
+        <item name="backgroundPopupMenu">@drawable/mshare_bg_white</item>
         <item name="colorDonation">@color/colorDonation</item>
         <item name="colorDivider">@color/colorDivider</item>
         <item name="colorPassive">@color/colorPassive</item>
@@ -51,7 +51,7 @@
         <item name="selectionAccentColor">@color/selection_accent</item>
         <item name="selectionColor">@color/selection</item>
         <item name="selectableItemBackground">@drawable/selectable_item_background</item>
-        <item name="snackbarBackground">@drawable/background_snackbar</item>
+        <item name="snackbarBackground">@drawable/mshare_bg_white</item>
         <item name="stateSelectedImage">@drawable/state_selected_image</item>
         <item name="stateSelectedImageRounded">@drawable/state_selected_image_rounded</item>
         <item name="stateSelectedImageRoundedGuiding">

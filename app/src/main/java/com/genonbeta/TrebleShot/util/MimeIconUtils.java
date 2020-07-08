@@ -40,10 +40,6 @@ public class MimeIconUtils
         // Package
         icon = R.drawable.ic_android_head_white_24dp;
         add("application/vnd.android.package-archive", icon);
-        // Audio
-        icon = R.drawable.ic_music_box_white_24dp;
-        add("application/ogg", icon);
-        add("application/x-flac", icon);
         // Certificate
         icon = R.drawable.ic_certificate_white_24dp;
         add("application/pgp-keys", icon);
@@ -56,70 +52,6 @@ public class MimeIconUtils
         add("application/x-pkcs7-certificates", icon);
         add("application/x-pkcs7-mime", icon);
         add("application/x-pkcs7-signature", icon);
-        // Source code
-        icon = R.drawable.ic_code_tags_white_24dp;
-        add("application/rdf+xml", icon);
-        add("application/rss+xml", icon);
-        add("application/x-object", icon);
-        add("application/xhtml+xml", icon);
-        add("text/css", icon);
-        add("text/html", icon);
-        add("text/xml", icon);
-        add("text/x-c++hdr", icon);
-        add("text/x-c++src", icon);
-        add("text/x-chdr", icon);
-        add("text/x-csrc", icon);
-        add("text/x-dsrc", icon);
-        add("text/x-csh", icon);
-        add("text/x-haskell", icon);
-        add("text/x-java", icon);
-        add("text/x-literate-haskell", icon);
-        add("text/x-pascal", icon);
-        add("text/x-tcl", icon);
-        add("text/x-tex", icon);
-        add("application/x-latex", icon);
-        add("application/x-texinfo", icon);
-        add("application/atom+xml", icon);
-        add("application/ecmascript", icon);
-        add("application/json", icon);
-        add("application/javascript", icon);
-        add("application/xml", icon);
-        add("text/javascript", icon);
-        add("application/x-javascript", icon);
-        // Compressed
-        icon = R.drawable.ic_zip_box_white_24dp;
-        add("application/mac-binhex40", icon);
-        add("application/rar", icon);
-        add("application/zip", icon);
-        add("application/x-apple-diskimage", icon);
-        add("application/x-debian-package", icon);
-        add("application/x-gtar", icon);
-        add("application/x-iso9660-image", icon);
-        add("application/x-lha", icon);
-        add("application/x-lzh", icon);
-        add("application/x-lzx", icon);
-        add("application/x-stuffit", icon);
-        add("application/x-tar", icon);
-        add("application/x-webarchive", icon);
-        add("application/x-webarchive-xml", icon);
-        add("application/gzip", icon);
-        add("application/x-7z-compressed", icon);
-        add("application/x-deb", icon);
-        add("application/x-rar-compressed", icon);
-        // Contact
-        icon = R.drawable.ic_account_box_white_24dp;
-        add("text/x-vcard", icon);
-        add("text/vcard", icon);
-        // Event
-        icon = R.drawable.ic_calendar_white_24dp;
-        add("text/calendar", icon);
-        add("text/x-vcalendar", icon);
-        // Font
-        icon = R.drawable.ic_file_font_white_24dp;
-        add("application/x-font", icon);
-        add("application/font-woff", icon);
-        add("application/x-font-woff", icon);
-        add("application/x-font-ttf", icon);
         // Image
         icon = R.drawable.ic_photo_white_24dp;
         add("application/vnd.oasis.opendocument.graphics", icon);
@@ -208,9 +140,7 @@ public class MimeIconUtils
 
         final String typeOnly = mimeType.split("/")[0];
 
-        if ("audio".equals(typeOnly)) {
-            return R.drawable.ic_music_box_white_24dp;
-        } else if ("image".equals(typeOnly)) {
+        if ("image".equals(typeOnly)) {
             return R.drawable.ic_photo_white_24dp;
         } else if ("text".equals(typeOnly)) {
             return R.drawable.ic_file_document_box_white_24dp;

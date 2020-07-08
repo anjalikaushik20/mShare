@@ -84,7 +84,7 @@ public class ActiveConnectionListFragment extends EditableListFragment<ActiveCon
     {
         super.onActivityCreated(savedInstanceState);
 
-        setEmptyImage(R.drawable.ic_share_white_24dp);
+        setEmptyImage(R.drawable.mshare_share);
         setEmptyText(getString(R.string.text_listEmptyConnection));
     }
 

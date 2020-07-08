@@ -1,5 +1,6 @@
 package com.genonbeta.TrebleShot.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -112,10 +113,10 @@ public class HotspotManagerFragment
         mColorPassiveState = ColorStateList.valueOf(ContextCompat.getColor(getContext(), AppUtils.getReference(getContext(), R.attr.colorPassive)));
         mCodeView = view.findViewById(R.id.layout_hotspot_manager_qr_image);
         mToggleButton = view.findViewById(R.id.layout_hotspot_manager_info_toggle_button);
-        mContainerText1 = view.findViewById(R.id.layout_hotspot_manager_info_container_text1_container);
+//        mContainerText1 = view.findViewById(R.id.layout_hotspot_manager_info_container_text1_container);
         mContainerText2 = view.findViewById(R.id.layout_hotspot_manager_info_container_text2_container);
         mContainerText3 = view.findViewById(R.id.layout_hotspot_manager_info_container_text3_container);
-        mText1 = view.findViewById(R.id.layout_hotspot_manager_info_container_text1);
+  //      mText1 = view.findViewById(R.id.layout_hotspot_manager_info_container_text1);
         mText2 = view.findViewById(R.id.layout_hotspot_manager_info_container_text2);
         mText3 = view.findViewById(R.id.layout_hotspot_manager_info_container_text3);
 
@@ -141,6 +142,7 @@ public class HotspotManagerFragment
         showMenu();
     }
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -150,6 +152,7 @@ public class HotspotManagerFragment
             String hotspotName = getConnectionUtils().getHotspotUtils().getConfiguration().SSID;
             String friendlyName = AppUtils.getFriendlySSID(hotspotName);
 
+            assert getActivity() != null;
             new AlertDialog.Builder(getActivity())
                     .setMessage(getString(R.string.mesg_hotspotCreatedInfo, hotspotName, friendlyName))
                     .setPositiveButton(android.R.string.ok, null)

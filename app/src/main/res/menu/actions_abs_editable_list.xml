@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<!--
     <item
         android:id="@+id/actions_abs_editable_filter"
         android:icon="@drawable/ic_search_white_24dp"
@@ -10,7 +10,7 @@
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always"
         android:visible="false"/>
-
+-->
     <item
         android:id="@+id/actions_abs_editable_multi_select"
         android:icon="@drawable/ic_format_list_checks_white_24dp"
