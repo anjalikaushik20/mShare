@@ -176,9 +176,9 @@ public class HotspotManagerFragment
     public void onResume()
     {
         super.onResume();
-
+        assert getContext() != null;
         getContext().registerReceiver(mStatusReceiver, mIntentFilter);
-        updateState();
+//        updateState();
 
         if (mWaitForHotspot)
             toggleHotspot();
@@ -228,11 +228,11 @@ public class HotspotManagerFragment
     {
         mHotspotStartedExternally = false;
 
-        updateViews(null,
-                getString(R.string.text_qrCodeHotspotDisabledHelp),
-                null,
-                null,
-                R.string.text_startHotspot);
+//        updateViews(null,
+  //              getString(R.string.text_qrCodeHotspotDisabledHelp),
+    //            null,
+      //          null,
+        //        R.string.text_startHotspot);
     }
 
     private void updateViewsStartedExternally()
@@ -298,7 +298,7 @@ public class HotspotManagerFragment
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            mContainerText1.setVisibility(text1 == null ? View.GONE : View.VISIBLE);
+//            mContainerText1.setVisibility(text1 == null ? View.GONE : View.VISIBLE);
             mContainerText2.setVisibility(text2 == null ? View.GONE : View.VISIBLE);
             mContainerText3.setVisibility(text3 == null ? View.GONE : View.VISIBLE);
 
@@ -324,7 +324,7 @@ public class HotspotManagerFragment
         showMenu();
 
         if (!isEnabled) {
-            updateViewsWithBlank();
+//            updateViewsWithBlank();
         } else if (getConnectionUtils().getHotspotUtils() instanceof HotspotUtils.HackAPI
                 && wifiConfiguration != null) {
             updateViews(wifiConfiguration.SSID, wifiConfiguration.preSharedKey, NetworkUtils.getAllowedKeyManagement(wifiConfiguration));

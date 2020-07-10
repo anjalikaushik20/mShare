@@ -199,11 +199,13 @@
     <string name="text_communicationServiceStop">Tap to end session</string>
     <string name="text_remainingTime">ETA %s</string>
     <string name="butn_showFiles">Show files</string>
+
     <string name="butn_trustZoneDevice">Set as TrustZone device</string>
     <string name="butn_turnTrustZoneOn">Turn TrustZone on</string>
     <string name="butn_turnTrustZoneOff">Turn TrustZone off</string>
     <string name="text_trustZoneEnabled">TrustZone</string>
     <string name="text_trustZoneEnabledSummary">TrustZone is activated on start</string>
+
     <string name="butn_typeNewEntry">Type new entry</string>
     <string name="butn_download">Download</string>
     <string name="mesg_clipboardUpdateNotice">Revise the text or press again to exit</string>
@@ -488,5 +490,6 @@
     <string name="ms_name_device">Name your Device</string>
     <string name="ms_send">Send</string>
     <string name="ms_recieve">Receive</string>
+    <string name="ms_endsession">End Session</string>
 
 </resources>
