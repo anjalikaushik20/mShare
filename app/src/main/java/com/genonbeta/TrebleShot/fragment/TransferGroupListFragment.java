@@ -96,9 +96,8 @@ public class TransferGroupListFragment
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
-        final String[] flag = new String[1];
 
-        setEmptyImage(R.drawable.centre_image);
+        //setEmptyImage(R.drawable.centre_image);
         //setEmptyText(getString(R.string.ms_nothing_to_show));
 
         View viewSend = view.findViewById(R.id.sendLayoutButton);

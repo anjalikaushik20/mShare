@@ -78,8 +78,8 @@ public class ViewTransferActivity
     private MenuItem mShowFilesMenu;
     private MenuItem mAddDeviceMenu;
     private MenuItem mSettingsMenu;
-    private MenuItem mWebShareShortcut;
-    private MenuItem mToggleBrowserShare;
+    //private MenuItem mWebShareShortcut;
+    //private MenuItem mToggleBrowserShare;
     private CrunchLatestDataTask mDataCruncher;
     private BroadcastReceiver mReceiver = new BroadcastReceiver()
     {

@@ -237,9 +237,10 @@
     </style>
 
     <style name="CustomListFragmentEmptyImageStyle">
-        <item name="android:background">?rippleBackground</item>
+        <!--<item name="android:background">?rippleBackground</item>-->
+        <item name="android:background">@drawable/centre_image</item>
         <item name="android:cropToPadding">true</item>
-        <item name="srcCompat">@drawable/mshare_m_appbar</item>
+        <!--<item name="srcCompat">@drawable/mshare_m_appbar</item>-->
         <item name="tint">@android:color/white</item>
     </style>
 

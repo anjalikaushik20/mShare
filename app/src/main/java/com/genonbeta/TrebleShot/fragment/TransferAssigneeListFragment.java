@@ -83,7 +83,7 @@ public class TransferAssigneeListFragment
     {
         super.onViewCreated(view, savedInstanceState);
 
-        setEmptyImage(R.drawable.ic_close_white_24dp);
+        //setEmptyImage(R.drawable.ic_close_white_24dp);
         setEmptyText(getString(R.string.ms_noDevicesAdded));
         /*useEmptyActionButton(getString(R.string.butn_shareOnBrowser), new View.OnClickListener()
         {
