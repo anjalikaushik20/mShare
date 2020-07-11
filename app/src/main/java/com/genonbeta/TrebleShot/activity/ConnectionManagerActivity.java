@@ -177,7 +177,7 @@ public class ConnectionManagerActivity
         setContentView(R.layout.activity_connection_manager);
 
         FragmentFactory factory = getSupportFragmentManager().getFragmentFactory();
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
         mAppBarLayout = findViewById(R.id.app_bar);
         mProgressBar = findViewById(R.id.activity_connection_establishing_progress_bar);
         mToolbarLayout = findViewById(R.id.toolbar_layout);
@@ -191,7 +191,7 @@ public class ConnectionManagerActivity
         mFilter.addAction(CommunicationService.ACTION_DEVICE_ACQUAINTANCE);
         mFilter.addAction(CommunicationService.ACTION_INCOMING_TRANSFER_READY);
 
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

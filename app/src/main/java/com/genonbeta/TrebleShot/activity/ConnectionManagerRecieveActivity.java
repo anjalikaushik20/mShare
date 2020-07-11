@@ -175,10 +175,10 @@ public class ConnectionManagerRecieveActivity
         super.onCreate(savedInstanceState);
 
         setResult(RESULT_CANCELED);
-        setContentView(R.layout.activity_connection_manager);
+        setContentView(R.layout.activity_connection_manager_recieve);
 
         FragmentFactory factory = getSupportFragmentManager().getFragmentFactory();
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
         mAppBarLayout = findViewById(R.id.app_bar);
         mProgressBar = findViewById(R.id.activity_connection_establishing_progress_bar);
         mToolbarLayout = findViewById(R.id.toolbar_layout);

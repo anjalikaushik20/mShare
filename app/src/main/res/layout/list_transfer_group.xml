@@ -107,7 +107,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
-                        app:srcCompat="@drawable/ic_web_white_24dp" />
+                        app:srcCompat="@drawable/mshare_globe" />
                 </LinearLayout>
 
             </LinearLayout>

@@ -491,5 +491,7 @@
     <string name="ms_send">Send</string>
     <string name="ms_recieve">Receive</string>
     <string name="ms_endsession">End Session</string>
+    <string name="ms_addDevices">Add Devices</string>
+    <string name="ms_noDevicesAdded">No device added</string>
 
 </resources>
