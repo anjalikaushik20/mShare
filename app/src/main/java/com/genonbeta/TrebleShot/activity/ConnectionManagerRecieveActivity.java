@@ -401,9 +401,6 @@ public class ConnectionManagerRecieveActivity
                 public void onClick(View v)
                 {
                     switch (v.getId()) {
-                        case R.id.connection_option_devices:
-                            updateFragment(AvailableFragment.UseKnownDevice);
-                            break;
                         case R.id.connection_option_hotspot:
                           updateFragment(AvailableFragment.CreateHotspot);
                         break;
@@ -411,7 +408,6 @@ public class ConnectionManagerRecieveActivity
                 }
             };
 
-            view.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
             view.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
 
             return view;

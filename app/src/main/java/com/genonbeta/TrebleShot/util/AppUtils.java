@@ -107,7 +107,7 @@ public class AppUtils
         object.put(Keyword.DEVICE_INFO, deviceInformation);
     }
 
-    public static void createFeedbackIntent(Activity activity)
+    /*public static void createFeedbackIntent(Activity activity)
     {
         Intent intent = new Intent(Intent.ACTION_SEND)
                 .setType("text/plain")
@@ -126,7 +126,7 @@ public class AppUtils
         }
 
         activity.startActivity(Intent.createChooser(intent, activity.getString(R.string.butn_feedbackContact)));
-    }
+    }*/
 
     public static boolean checkRunningConditions(Context context)
     {

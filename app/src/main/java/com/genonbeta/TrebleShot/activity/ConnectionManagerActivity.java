@@ -400,9 +400,9 @@ public class ConnectionManagerActivity
                 public void onClick(View v)
                 {
                     switch (v.getId()) {
-                        case R.id.connection_option_devices:
-                            updateFragment(AvailableFragment.UseKnownDevice);
-                            break;
+                        //case R.id.connection_option_devices:
+                          //  updateFragment(AvailableFragment.UseKnownDevice);
+                            //break;
                         //case R.id.connection_option_hotspot:
                           //  updateFragment(AvailableFragment.CreateHotspot);
                             //break;
@@ -418,7 +418,7 @@ public class ConnectionManagerActivity
                 }
             };
 
-            view.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
+            //view.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
             //view.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
             //view.findViewById(R.id.connection_option_network).setOnClickListener(listener);
             view.findViewById(R.id.connection_option_scan).setOnClickListener(listener);
@@ -450,9 +450,6 @@ public class ConnectionManagerActivity
                 public void onClick(View v)
                 {
                     switch (v.getId()) {
-                        case R.id.connection_option_devices:
-                            updateFragment(AvailableFragment.UseKnownDevice);
-                            break;
                         case R.id.connection_option_hotspot:
                             updateFragment(AvailableFragment.CreateHotspot);
                             break;
@@ -460,7 +457,6 @@ public class ConnectionManagerActivity
                 }
             };
 
-            viewR.findViewById(R.id.connection_option_devices).setOnClickListener(listener);
             viewR.findViewById(R.id.connection_option_hotspot).setOnClickListener(listener);
 
             return viewR;

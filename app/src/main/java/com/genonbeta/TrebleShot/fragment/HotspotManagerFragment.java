@@ -61,10 +61,10 @@ public class HotspotManagerFragment
     private StatusReceiver mStatusReceiver = new StatusReceiver();
     private UIConnectionUtils mConnectionUtils;
 
-    private View mContainerText1;
+    //private View mContainerText1;
     private View mContainerText2;
     private View mContainerText3;
-    private TextView mText1;
+    //private TextView mText1;
     private TextView mText2;
     private TextView mText3;
     private ImageView mCodeView;
@@ -178,7 +178,7 @@ public class HotspotManagerFragment
         super.onResume();
         assert getContext() != null;
         getContext().registerReceiver(mStatusReceiver, mIntentFilter);
-//        updateState();
+        updateState();
 
         if (mWaitForHotspot)
             toggleHotspot();
@@ -228,11 +228,11 @@ public class HotspotManagerFragment
     {
         mHotspotStartedExternally = false;
 
-//        updateViews(null,
-  //              getString(R.string.text_qrCodeHotspotDisabledHelp),
-    //            null,
-      //          null,
-        //        R.string.text_startHotspot);
+        updateViews(null,
+                getString(R.string.text_qrCodeHotspotDisabledHelp),
+                null,
+                null,
+                R.string.text_startHotspot);
     }
 
     private void updateViewsStartedExternally()
@@ -324,7 +324,7 @@ public class HotspotManagerFragment
         showMenu();
 
         if (!isEnabled) {
-//            updateViewsWithBlank();
+            updateViewsWithBlank();
         } else if (getConnectionUtils().getHotspotUtils() instanceof HotspotUtils.HackAPI
                 && wifiConfiguration != null) {
             updateViews(wifiConfiguration.SSID, wifiConfiguration.preSharedKey, NetworkUtils.getAllowedKeyManagement(wifiConfiguration));
