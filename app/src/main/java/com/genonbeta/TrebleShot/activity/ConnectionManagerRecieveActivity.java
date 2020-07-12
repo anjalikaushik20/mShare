@@ -15,7 +15,6 @@ import android.widget.ProgressBar;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentFactory;
 import androidx.fragment.app.FragmentTransaction;
@@ -43,7 +42,6 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.snackbar.Snackbar;
 
-import static com.genonbeta.TrebleShot.R.layout.layout_connection_options_fragment;
 import static com.genonbeta.TrebleShot.R.layout.layput_connection_options_recieve_btn;
 
 public class ConnectionManagerRecieveActivity
@@ -178,7 +176,6 @@ public class ConnectionManagerRecieveActivity
         setContentView(R.layout.activity_connection_manager_recieve);
 
         FragmentFactory factory = getSupportFragmentManager().getFragmentFactory();
-        //Toolbar toolbar = findViewById(R.id.toolbar);
         mAppBarLayout = findViewById(R.id.app_bar);
         mProgressBar = findViewById(R.id.activity_connection_establishing_progress_bar);
         mToolbarLayout = findViewById(R.id.toolbar_layout);
@@ -191,8 +188,6 @@ public class ConnectionManagerRecieveActivity
         mFilter.addAction(ACTION_CHANGE_FRAGMENT);
         mFilter.addAction(CommunicationService.ACTION_DEVICE_ACQUAINTANCE);
         mFilter.addAction(CommunicationService.ACTION_INCOMING_TRANSFER_READY);
-
-//        setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null)
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

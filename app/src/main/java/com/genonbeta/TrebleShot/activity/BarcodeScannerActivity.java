@@ -25,9 +25,6 @@ public class BarcodeScannerActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barcode_scanner);
 
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
         setResult(RESULT_CANCELED);
 
         if (getSupportActionBar() != null)

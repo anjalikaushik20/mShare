@@ -165,13 +165,6 @@ public class TransferGroupListFragment
         options.put(getString(R.string.text_sortBySize), TransferGroupListAdapter.MODE_SORT_BY_SIZE);
     }
 
-    /*@Override
-    public void onGroupingOptions(Map<String, Integer> options)
-    {
-        options.put(getString(R.string.text_groupByNothing), TransferGroupListAdapter.MODE_GROUP_BY_NOTHING);
-        options.put(getString(R.string.text_groupByDate), TransferGroupListAdapter.MODE_GROUP_BY_DATE);
-    }*/
-
     @Override
     public TransferGroupListAdapter onAdapter()
     {
@@ -276,24 +269,6 @@ public class TransferGroupListFragment
             if (id == R.id.action_mode_group_delete)
                 AppUtils.getDatabase(getFragment().getContext())
                         .removeAsynchronous(getFragment().getActivity(), selectionList);
-            /*else if (id == R.id.action_mode_group_serve_on_web
-                    || id == R.id.action_mode_group_hide_on_web) {
-                boolean success = false;
-
-                for (TransferGroupListAdapter.PreloadedGroup group : selectionList) {
-                    group.isServedOnWeb = group.index.outgoingCount > 0
-                            && id == R.id.action_mode_group_serve_on_web;
-
-                    if (group.isServedOnWeb)
-                        success = true;
-                }
-
-                AppUtils.getDatabase(getFragment().getContext()).update(selectionList);
-
-                if (success)
-                    AppUtils.startWebShareActivity(getFragment().getActivity(), true);
-            } else
-                return super.onActionMenuItemSelected(context, actionMode, item);*/
 
             return true;
         }
