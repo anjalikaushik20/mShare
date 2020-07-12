@@ -116,7 +116,7 @@ public class ConnectionUtils {
             } else {
                 Log.d(TAG, "establishHotspotConnection(): Waiting to connect to the server");
                 final DhcpInfo routeInfo = getWifiManager().getDhcpInfo();
-                //Log.w(TAG, String.format("establishHotspotConnection(): DHCP: %s", routeInfo));
+                Log.w(TAG, String.format("establishHotspotConnection(): DHCP: %s", routeInfo));
 
                 if (routeInfo != null && routeInfo.gateway != 0) {
                     final String testedRemoteAddress = NetworkUtils.convertInet4Address(routeInfo.gateway);

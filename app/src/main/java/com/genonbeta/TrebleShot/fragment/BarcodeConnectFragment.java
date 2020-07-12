@@ -88,7 +88,7 @@ public class BarcodeConnectFragment
     private boolean mPermissionRequestedCamera = false;
     private boolean mPermissionRequestedLocation = false;
     private boolean mShowAsText = false;
-    //private String mPreviousScanResult = null;
+    private String mPreviousScanResult = null;
 
     private UIConnectionUtils.RequestWatcher mPermissionWatcher = new UIConnectionUtils.RequestWatcher()
     {
@@ -102,8 +102,8 @@ public class BarcodeConnectFragment
 
             // We don't want to keep this when the result is ok
             // or not asked to wait
-            //if (!shouldWait || result)
-            //    mPreviousScanResult = null;
+            if (!shouldWait || result)
+                mPreviousScanResult = null;
         }
     };
 
@@ -223,8 +223,8 @@ public class BarcodeConnectFragment
         getContext().registerReceiver(mReceiver, mIntentFilter);
         updateState();
 
-        //if (mPreviousScanResult != null)
-        //    handleBarcode(mPreviousScanResult);
+        if (mPreviousScanResult != null)
+            handleBarcode(mPreviousScanResult);
     }
 
     @Override
@@ -264,7 +264,7 @@ public class BarcodeConnectFragment
         };
 
         try {
-            //mPreviousScanResult = code; // Fail-safe
+            mPreviousScanResult = code; // Fail-safe
             if (mShowAsText)
                 throw new JSONException("Showing as text.");
 

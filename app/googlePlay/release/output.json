@@ -1,1 +1,20 @@
-[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":97,"versionName":"1.4.1","enabled":true,"outputFile":"app-googlePlay-release.apk","fullName":"googlePlayRelease","baseName":"googlePlay-release"},"path":"app-googlePlay-release.apk","properties":{}}]
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.genonbeta.TrebleShot",
+  "variantName": "googlePlayRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 98,
+      "versionName": "98",
+      "enabled": true,
+      "outputFile": "app-googlePlay-release.apk"
+    }
+  ]
+}
