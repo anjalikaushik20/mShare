@@ -52,9 +52,9 @@ public class NetworkManagerFragment
     private StatusReceiver mStatusReceiver = new StatusReceiver();
     private UIConnectionUtils mConnectionUtils;
 
-    private View mContainerText1;
+    //private View mContainerText1;
     private View mContainerText2;
-    private View mContainerText3;
+    //private View mContainerText3;
     private Button mActionButton;
     private TextView mText1;
     private TextView mText2;
@@ -90,7 +90,7 @@ public class NetworkManagerFragment
         mCodeView = view.findViewById(R.id.layout_network_manager_qr_image);
  //       mContainerText1 = view.findViewById(R.id.layout_network_manager_info_container_text1_container);
         mContainerText2 = view.findViewById(R.id.layout_network_manager_info_container_text2_container);
-        mContainerText3 = view.findViewById(R.id.layout_network_manager_info_container_text3_container);
+        //mContainerText3 = view.findViewById(R.id.layout_network_manager_info_container_text3_container);
  //       mText1 = view.findViewById(R.id.layout_network_manager_info_container_text1);
         mText2 = view.findViewById(R.id.layout_network_manager_info_container_text2);
         //mText3 = view.findViewById(R.id.layout_network_manager_info_container_text3);
@@ -125,6 +125,7 @@ public class NetworkManagerFragment
     {
         super.onResume();
 
+        assert getContext() != null;
         getContext().registerReceiver(mStatusReceiver, mIntentFilter);
         updateState();
     }
@@ -133,6 +134,7 @@ public class NetworkManagerFragment
     public void onPause()
     {
         super.onPause();
+        assert getContext() != null;
         getContext().unregisterReceiver(mStatusReceiver);
     }
 
@@ -226,14 +228,14 @@ public class NetworkManagerFragment
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            mContainerText1.setVisibility(text1 == null ? View.GONE : View.VISIBLE);
+            //mContainerText1.setVisibility(text1 == null ? View.GONE : View.VISIBLE);
             mContainerText2.setVisibility(text2 == null ? View.GONE : View.VISIBLE);
-            mContainerText3.setVisibility(text3 == null ? View.GONE : View.VISIBLE);
+            //mContainerText3.setVisibility(text3 == null ? View.GONE : View.VISIBLE);
 
             mActionButton.setText(buttonText);
-            mText1.setText(text1);
+            //mText1.setText(text1);
             mText2.setText(text2);
-            mText3.setText(text3);
+            //mText3.setText(text3);
         }
     }
 

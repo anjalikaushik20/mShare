@@ -90,7 +90,7 @@ public class NetworkDeviceLoader
 
                     client.setReturn(device);
                 } catch (Exception e) {
-                    if (listener != null && listener instanceof OnDeviceRegisteredErrorListener)
+                    if (listener instanceof OnDeviceRegisteredErrorListener)
                         ((OnDeviceRegisteredErrorListener) listener).onError(e);
                 }
             }

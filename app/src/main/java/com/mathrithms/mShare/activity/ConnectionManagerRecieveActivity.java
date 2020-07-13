@@ -121,11 +121,9 @@ public class ConnectionManagerRecieveActivity
         }
     };
 
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver()
-    {
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent)
-        {
+        public void onReceive(Context context, Intent intent) {
             if (ACTION_CHANGE_FRAGMENT.equals(intent.getAction())
                     && intent.hasExtra(EXTRA_FRAGMENT_ENUM)) {
                 String fragmentEnum = intent.getStringExtra(EXTRA_FRAGMENT_ENUM);

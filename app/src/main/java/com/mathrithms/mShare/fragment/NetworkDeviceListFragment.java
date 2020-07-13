@@ -61,7 +61,7 @@ public class NetworkDeviceListFragment
     @Nullable
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private UIConnectionUtils mConnectionUtils;
-    private boolean mWaitForWiFi = false;
+    private boolean mWaitForWiFi = true;
 
     private UIConnectionUtils.RequestWatcher mWiFiWatcher = new UIConnectionUtils.RequestWatcher()
     {
