@@ -202,13 +202,13 @@ public class HomeActivity
             ft.commit();
             //webview added
         } else if (R.id.menu_activity_main_send_application == mChosenMenuItemId) {
-            FragmentManager fml = getFragmentManager();
+            /*FragmentManager fml = getFragmentManager();
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             Webview_Fragment wf = new Webview_Fragment();
             ft.replace(R.id.activitiy_home_fragment,wf);
-            ft.commit();
-            //new ShareAppDialog(HomeActivity.this)
-              //      .show();
+            ft.commit();*/
+            new ShareAppDialog(HomeActivity.this)
+                    .show();
         } else if (R.id.menu_activity_main_preferences == mChosenMenuItemId) {
             startActivity(new Intent(this, PreferencesActivity.class));
         } else if (R.id.menu_activity_main_home == mChosenMenuItemId){
