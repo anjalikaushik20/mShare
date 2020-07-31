@@ -37,6 +37,8 @@ import com.mathrithms.mShare.util.UpdateUtils;
 import com.genonbeta.android.framework.widget.PowerfulActionMode;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 public class HomeActivity
         extends Activity
         implements NavigationView.OnNavigationItemSelectedListener, PowerfulActionModeSupport
@@ -63,6 +65,7 @@ public class HomeActivity
 
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
         mHomeFragment = (HomeFragment) getSupportFragmentManager().findFragmentById(R.id.activitiy_home_fragment);
         mActionMode = findViewById(R.id.content_powerful_action_mode);
