@@ -99,7 +99,7 @@ public class HomeActivity
         if (UpdateUtils.hasNewVersion(this))
             highlightUpdater(getDefaultPreferences().getString("availableVersion", null));
 
-        if (!AppUtils.isLatestChangeLogSeen(this)) {
+        /*if (!AppUtils.isLatestChangeLogSeen(this)) {
             new AlertDialog.Builder(this)
                     .setMessage(R.string.mesg_versionUpdatedChangelog)
                     .setPositiveButton(R.string.butn_yes, new DialogInterface.OnClickListener()
@@ -131,7 +131,7 @@ public class HomeActivity
                         }
                     })
                     .show();
-        }
+        }*/
     }
 
     @Override
