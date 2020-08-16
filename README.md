@@ -1,6 +1,6 @@
 # mShare
 
-### Project Manager: Anjali Kaushik ([Find me on GitHub](https://github.com/anjalikaushik20)
+### Project Manager: Anjali Kaushik ([Find me on GitHub](https://github.com/anjalikaushik20))
 ### Company: Mathrithms ([Find on GitHub](https://github.com/mathrithms))
 
 ## About
