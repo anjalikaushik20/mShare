@@ -31,14 +31,14 @@ Required tools:
 * Android Studio: 4.0.0
 
 ## Screenshots
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_1.jpg" width=200>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_1.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_1.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_1.jpg)
 [<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_2.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_2.jpg)
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_3.jpg" width=160>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_3.jpg)
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_4.jpg" width=160>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_4.jpg)
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_5.jpg" width=160>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_5.jpg)
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_6.jpg" width=160>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_6.jpg)
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_7.jpg" width=160>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_7.jpg)
-[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_8.jpg" width=160>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_8.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_3.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_3.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_4.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_4.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_5.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_5.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_6.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_6.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_7.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_7.jpg)
+[<img src="https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_8.jpg" width=180>](https://github.com/anjalikaushik20/mShare/blob/master/fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_8.jpg)
 
 ### Inspiration: TrebleShot libre software file and text sharing app
 ### Find on GitHub: [TrebleShot](https://github.com/trebleshot/android)
