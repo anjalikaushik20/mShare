@@ -29,7 +29,7 @@ Required tools;
 
 ## Screenshots
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/shot_6.png" width=160>](fastlane/metadata/android/en-US/images/phoneScreenshots/shot_6.png)
-[<img src="https://drive.google.com/file/d/1e01UkimU2g0gMoqtSRp90U6lTHnDj8WW/view?usp=sharing" width=160>](https://drive.google.com/file/d/1e01UkimU2g0gMoqtSRp90U6lTHnDj8WW/view?usp=sharing)
+[<img src="fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_1.png" width=160>](fastlane/metadata/android/en-IN/images/phoneScreenshots/shot_1.png)
 
 
 This app is licensed under GNU Public License version 2.0 or later version.
