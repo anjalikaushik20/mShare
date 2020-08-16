@@ -1,9 +1,7 @@
 # mShare
 
-### Project Manager: Anjali Kaushik
-### Find me on GitHub: [Anjali Kaushik](https://github.com/anjalikaushik20)
-### Company: Mathrithms
-### Find on GitHub: [Mathrithms](https://github.com/mathrithms)
+### Project Manager: Anjali Kaushik ([Find me on GitHub](https://github.com/anjalikaushik20)
+### Company: Mathrithms ([Find on GitHub](https://github.com/mathrithms))
 
 ## About
 * Send and receive files over available connections.
