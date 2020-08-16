@@ -3,7 +3,9 @@
 ### Project Manager: Anjali Kaushik
 ### Find me on GitHub: [Anjali Kaushik](https://github.com/anjalikaushik20)
 
-## Send and receive files over available connections.
+Send and receive files over available connections.
+An Indian file sharing app!
+
 ## Get it on
 [<img src="assets/google-play-badge.png" width="230">](https://play.google.com/store/apps/details?id=com.mathrithms.mShare)
 
@@ -27,14 +29,7 @@ Required tools;
 
 ## Screenshots
 [<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/shot_6.png" width=160>](fastlane/metadata/android/en-US/images/phoneScreenshots/shot_6.png)
-
-## Localization
-To translate TrebleShot, please read
-[this wiki](https://github.com/genonbeta/TrebleShot/wiki/Language-contribution) first if you haven't
-worked with Weblate, where you will find the [TrebleShot localization](https://hosted.weblate.org/engage/TrebleShot/).
-
-
-[![Translation Status](https://hosted.weblate.org/widgets/trebleshot/-/multi-auto.svg)](https://hosted.weblate.org/engage/TrebleShot/)
+[<img src="https://drive.google.com/file/d/1e01UkimU2g0gMoqtSRp90U6lTHnDj8WW/view?usp=sharing" width=160>](https://drive.google.com/file/d/1e01UkimU2g0gMoqtSRp90U6lTHnDj8WW/view?usp=sharing)
 
 
 This app is licensed under GNU Public License version 2.0 or later version.
