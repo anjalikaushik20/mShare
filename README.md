@@ -41,4 +41,6 @@ Required tools:
 ### Inspiration: TrebleShot libre software file and text sharing app
 ### Find on GitHub: [TrebleShot](https://github.com/trebleshot/android)
 
+#### Find the project on [Mathrithms](https://github.com/mathrithms/mShare)
+
 This app is licensed under GNU Public License version 2.0 or later version.
